@@ -1,5 +1,5 @@
 {
-	"name": "find-a-doula",
+	"name": "chicago-doula-project",
 	"version": "1.0.0",
 	"scripts": {
 		"client": "cd client && yarn start",
@@ -7,7 +7,7 @@
 		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
 	},
 	"main": "index.js",
-	"repository": "git@github.com:Find-A-Doula/find-a-doula.git",
+	"repository": "git@github.com:Find-A-Doula/chicago-doula-project.git",
 	"author": "Juliette Rapala <jrapala@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
