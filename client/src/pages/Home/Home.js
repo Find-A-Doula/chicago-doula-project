@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CTAForm from '../../components/CTAForm';
 import './home.css';
 
 class Home extends Component {
@@ -23,11 +24,9 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">{this.state.response}</p>
+      <div className="landing-page">
+        <h1>Chicago Doula Project</h1>
+        <CTAForm />
       </div>
     );
   }

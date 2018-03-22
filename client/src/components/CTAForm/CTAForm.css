@@ -1,0 +1,26 @@
+.form-wrapper {
+  padding: 20px 40px;
+  font-size: 50px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  letter-spacing: 1px;
+  width: 100px;
+}
+
+.subscribe-btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  text-shadow: 1px 1px 3px #666666;
+  color: #ffffff;
+  font-size: 20px;
+  background: #a397c4;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.subscribe-btn:hover {
+  background: #695e8a;
+  text-decoration: none;
+}
