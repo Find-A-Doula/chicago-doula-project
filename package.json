@@ -4,7 +4,8 @@
 	"scripts": {
 		"client": "cd client && yarn start",
 		"server": "nodemon server.js",
-		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+		"build": "node scripts/build.js"
 	},
 	"main": "index.js",
 	"repository": "git@github.com:Find-A-Doula/chicago-doula-project.git",
