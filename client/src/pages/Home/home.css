@@ -1,0 +1,19 @@
+.landing-page {
+	width: 100%;
+	background-size: cover;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	background-color: #fff7e7;
+}
+
+.landing-page h1 {
+	padding: 20px 40px;
+	font-size: 50px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	letter-spacing: 1px;
+	padding-top: 180px;
+	width: 100px;
+}
