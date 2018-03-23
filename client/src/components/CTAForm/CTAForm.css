@@ -43,11 +43,8 @@
 
 /* Extra Small Devices, Phones */
 @media screen and (max-width: 640px) {
-  /*** Base Styles ***/
-
-  /*** Main Content (Global) ***/
-
-  /*** Header ***/
-
-  /*** About Page ***/
+  #CTA-email,
+  #CTA-email-wrapper {
+    max-width: 250px;
+  }
 }

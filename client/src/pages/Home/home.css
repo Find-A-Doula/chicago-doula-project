@@ -21,6 +21,5 @@
 
 #CTAconfirmation {
 	text-align: center;
-	opacity: 1;
-	transition: all 5s ease;
+	padding-top: 2px;
 }
