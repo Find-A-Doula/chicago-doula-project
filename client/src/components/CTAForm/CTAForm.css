@@ -35,6 +35,7 @@
   background: rgb(234, 8, 139) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 2px solid rgb(234, 8, 139);
   font: normal normal 600 normal 16px / 20px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
 }
 
 /* Media Queries 
