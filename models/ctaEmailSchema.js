@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 // Get a reference to the mongoose Schema constructor
 const Schema = mongoose.Schema;
@@ -7,8 +8,9 @@ const Schema = mongoose.Schema;
 const ctaEmailSchema = new Schema({
 	email: {
 		type: String,
+		trim: true,
 		required: true,
-		match: [/.+\@.+\..+/, 'Please enter a valid e-mail address']
+		validate: [validator.isEmail, 'invalid email'] // Not working?
 	},
 	date: { type: Date, default: Date.now }
 });

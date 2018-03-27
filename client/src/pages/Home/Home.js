@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import CTAForm from '../../components/CTAForm';
 import './home.css';
+import axios from 'axios';
 
 class Home extends Component {
   state = {
-    response: '',
     userEmail: '',
     showCTA: true
   };
 
-  componentDidMount() {
-    // API testing
-    // this.callApi()
-    //   .then(res => this.setState({ response: res.express }))
-    //   .catch(err => console.log(err));
-  }
-
   handleFormSubmit = event => {
     event.preventDefault();
-    this.setState({ showCTA: false });
+
+    // Post email to ctaemails collection
+    axios
+      .post('/cta', { email: this.state.userEmail })
+      .then(this.setState({ showCTA: false }))
+      .catch(error => {
+        console.log(error.response);
+      });
   };
 
   handleInputChange = event => {
@@ -29,16 +29,6 @@ class Home extends Component {
       [name]: value
     });
   };
-
-  // API testing
-  // callApi = async () => {
-  //   const response = await fetch('/api/hello');
-  //   const body = await response.json();
-
-  //   if (response.status !== 200) throw Error(body.message);
-
-  //   return body;
-  // };
 
   render() {
     return (
