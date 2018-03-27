@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-flexbox-grid": "^2.0.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-toolbox": "^2.0.0-beta.12",
@@ -20,7 +21,7 @@
     "toolbox": "react-toolbox-themr"
   },
   "reactToolbox": {
-    "include": ["BUTTON", "DATE_PICKER"],
+    "include": ["BUTTON", "DATE_PICKER", "CHECKBOX", "INPUT"],
     "customProperties": {
       "animation-duration": "0.3s",
       "color-accent": "var(--palette-pink-a200)",
