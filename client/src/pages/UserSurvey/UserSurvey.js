@@ -6,41 +6,33 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class UserSurvey extends Component {
   state = {
-    surveyResults: {
-      doulaType: {
-        birthDoula: false,
-        postpartumDoula: false
-      },
-      birthDoulaNeeds: {
-        pregnancyHistory: {
-          firstPregnancy: false,
-          previousFullTermPregnancy: false,
-          previousPrematurePregnancy: false,
-          previousPregnancyLoss: false,
-          previousPregnancyTerminated: false
-        },
-        doulaYearsOfExperiences: 0,
-        miscNeeds: {
-          vbac: false,
-          multiples: false,
-          premature: false,
-          nursingLactation: false,
-          highRisk: false,
-          lgbtqFamily: false,
-          teen: false,
-          singleParent: false,
-          traumaInformed: false,
-          familiesOfColor: false,
-          adoption: false,
-          disabilities: false,
-          waterBirth: false,
-          homeBirth: false,
-          hospitalAdvocacy: false,
-          prenatalYoga: false
-        },
-        userZipCode: ''
-      }
-    }
+    // Doula Type
+    birthDoula: false,
+    postpartumDoula: false,
+    // Birth Doula Specifics
+    firstPregnancy: false,
+    previousFullTermPregnancy: false,
+    previousPrematurePregnancy: false,
+    previousPregnancyLoss: false,
+    previousPregnancyTerminated: false,
+    doulaYearsOfExperiences: 0,
+    vbac: false,
+    multiples: false,
+    premature: false,
+    nursingLactation: false,
+    highRisk: false,
+    lgbtqFamily: false,
+    teen: false,
+    singleParent: false,
+    traumaInformed: false,
+    familiesOfColor: false,
+    adoption: false,
+    disabilities: false,
+    waterBirth: false,
+    homeBirth: false,
+    hospitalAdvocacy: false,
+    prenatalYoga: false,
+    userZipCode: ''
   };
 
   handleFormSubmit = event => {
