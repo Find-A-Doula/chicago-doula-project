@@ -49,6 +49,7 @@ class UserSurvey extends Component {
 
         {this.state.birthDoula ? <BirthDoulaSurvey /> : <div />}
         {this.state.postpartumDoula ? <PostpartumDoulaSurvey /> : <div />}
+
       </Grid>
     );
   }

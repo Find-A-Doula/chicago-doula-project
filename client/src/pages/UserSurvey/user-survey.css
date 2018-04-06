@@ -1,3 +1,19 @@
+:root {
+  --main-bg-color: #fff7e7;
+  --main-text-color: #2c3d50;
+  --highlight: #f2ece3;
+  --lowlight: #ffa592;
+}
+
+body {
+	background-color: var(--main-bg-color);
+}
+
+h1, h2, h3, h4, h5, p, a, span {
+	color: var(--main-text-color) !important; 
+	/* need to change React Toolbox styles */
+}
+
 .first-question {
 	margin-top: 20%;
 }
