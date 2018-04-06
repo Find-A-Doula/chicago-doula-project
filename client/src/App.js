@@ -8,16 +8,16 @@ import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => (
-	<ThemeProvider theme={theme}>
-		<div className="App">
-			<Router>
-				<Switch>
-					<Route path="/search" component={UserSurvey} />
-					<Route path="/" component={Home} />
-				</Switch>
-			</Router>
-		</div>
-	</ThemeProvider>
+    <ThemeProvider theme={theme}>
+        <div className="App">
+            <Router>
+                <Switch>
+                    <Route path="/search" component={UserSurvey} />
+                    <Route path="/" component={Home} />
+                </Switch>
+            </Router>
+        </div>
+    </ThemeProvider>
 );
 
 export default App;
