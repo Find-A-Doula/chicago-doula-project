@@ -1,0 +1,25 @@
+.doula{
+	margin: 0px 10px;
+}
+
+.doula h1{
+	font-size: 55px;
+    margin-bottom: 0px;
+}
+
+.doula h3{
+	font-size: 35px;
+	font-weight: bold;
+    margin-bottom: 0px;
+
+}
+
+.doula p{
+	font-size: 25px;
+	color: #b27366;
+}
+
+.doula-reasons{
+	text-align: left;
+}
+
