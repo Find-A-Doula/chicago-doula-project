@@ -32,7 +32,17 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="landing-page">
+      <div className="landing-page">        <Col xs={12}>
+      <Row start="xs">
+        <Col xs={6} />
+        <div className="logo">
+        logo goes here and centered
+        </div>
+      </Row>
+      <Row>
+        Doula is ____________
+      </Row>
+    </Col>
         <h1>Chicago Doula Project</h1>
         {this.state.showCTA ? (
           <CTAForm
