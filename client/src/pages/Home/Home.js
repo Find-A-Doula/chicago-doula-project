@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-flexboxgrid'
 import CTAForm from '../../components/CTAForm';
 import './home.css';
 import axios from 'axios';
