@@ -21,7 +21,7 @@
     "toolbox": "react-toolbox-themr"
   },
   "reactToolbox": {
-    "include": ["BUTTON", "DATE_PICKER", "CHECKBOX", "INPUT"],
+    "include": ["BUTTON", "DATE_PICKER", "CHECKBOX", "INPUT", "SLIDER"],
     "customProperties": {
       "animation-duration": "0.3s",
       "color-accent": "var(--palette-pink-a200)",

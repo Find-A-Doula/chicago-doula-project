@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 // import './user-survey.css';
 import Checkbox from 'react-toolbox/lib/checkbox';
-// import Input from 'react-toolbox/lib/input';
+import Slider from 'react-toolbox/lib/slider';
+import Input from 'react-toolbox/lib/input';
+// import { Button, IconButton } from 'react-toolbox/lib/button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import './survey.css';
 
 class BirthDoulaSurvey extends Component {
   state = {
@@ -42,13 +45,20 @@ class BirthDoulaSurvey extends Component {
     this.setState({ ...this.state, [name]: value });
   };
 
+  handleSliderChange = (slider, value) => {
+    const newState = {};
+    newState[slider] = value;
+    this.setState(newState);
+  };
+
   render() {
     return (
       <Grid fluid>
 
         <div>
           <div id="question02">
-            <h2>I am looking for a birth doula...</h2>
+            <h2>Find a Birth Doula</h2>
+            <hr />
             <Row center="xs">
               <p className="question">Your Pregnancy:</p>
             </Row>
@@ -82,8 +92,26 @@ class BirthDoulaSurvey extends Component {
               </Col>
             </Row>
           </div>
-
           <div id="question03">
+            <Row center="xs">
+              <p className="question">I am looking for a doula with at least ___ years of experience:</p>
+            </Row>
+            <Row start="xs">
+              <Col xs={8} xsOffset={2}>
+                <Slider
+                  pinned
+                  snaps
+                  min={0}
+                  max={10}
+                  step={1}
+                  editable
+                  value={this.state.doulaYearsOfExperiences}
+                  onChange={this.handleSliderChange.bind(this, 'doulaYearsOfExperiences')}
+                />
+              </Col>
+            </Row>
+          </div>
+          <div id="question04">
             <Row center="xs">
               <p className="question">
                 Are you looking for a doula with experience in any of the following? (Check all that apply)
@@ -167,6 +195,25 @@ class BirthDoulaSurvey extends Component {
                   label="Prenatal Yoga"
                   onChange={this.handleChange.bind(this, 'prenatalYoga')}
                 />
+              </Col>
+            </Row>
+          </div>
+          <hr />
+          <div id="question05">
+            <Row center="xs">
+              <p className="question">Please Enter Your Zip Code:</p>
+            </Row>
+            <Row start="xs">
+              <Col xs={4} xsOffset={4}>
+                <Input
+                  type="text"
+                  label="Your Zip Code"
+                  name="userZipCode"
+                  value={this.state.userZipCode}
+                  onChange={this.handleChange.bind(this, 'userZipCode')}
+                  maxLength={5}
+                />
+
               </Col>
             </Row>
           </div>
