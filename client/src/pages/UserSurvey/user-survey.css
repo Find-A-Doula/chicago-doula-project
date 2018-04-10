@@ -14,9 +14,6 @@ h1, h2, h3, h4, h5, p, a, span {
 	/* need to change React Toolbox styles */
 }
 
-.first-question {
-	margin-top: 20%;
-}
 
 .question {
 	margin-top: 2%;
@@ -25,5 +22,8 @@ h1, h2, h3, h4, h5, p, a, span {
 
 h2 {
 	text-align: center;
-	margin-top: 5%;
+}
+
+input {
+	text-align: center;
 }

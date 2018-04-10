@@ -52,7 +52,6 @@ class PostpartumDoulaSurvey extends Component {
         <div>
 
           <div id="question02">
-            <h2>Find a Postpartum Doula</h2>
             <Row center="xs">
               <Card style={{ width: '450px', backgroundColor: '#f2ece3' }}>
                 <CardTitle title="About Your Pregnancy:" />
