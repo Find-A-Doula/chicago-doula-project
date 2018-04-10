@@ -1,3 +1,10 @@
+body{
+	overflow: 'auto';
+	background-color: #fff7e7;
+
+}
+
+
 .doula{
 	margin: 0px 10px;
 }
@@ -21,5 +28,35 @@
 
 .doula-reasons{
 	text-align: left;
+	padding-bottom: 50px;
 }
 
+
+.doula-reasons img{
+	text-align: right;
+	float: right;
+}
+
+.button {
+  color: #ffa592;
+  background: #2c3d50;
+  font-size: 46px;
+  border-radius: 12px;
+   &:focus {
+    outline: 1px dotted white;
+    outline-offset: -4px;
+  }
+}
+
+
+@media only screen and (max-width : 575px) {
+/* Styles */
+
+.doula-reasons img{
+	position: block;
+    top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
+}
+
+
+}
