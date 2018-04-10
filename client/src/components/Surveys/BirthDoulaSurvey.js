@@ -85,84 +85,86 @@ class BirthDoulaSurvey extends Component {
 
           <div id="question03">
             <Row center="xs">
-              <p className="question">I am interested in...</p>
+              <p className="question">
+                Are you looking for a doula with experience in any of the following? (Check all that apply)
+              </p>
             </Row>
             <Row start="xs">
-              <Col mdOffset={2} xsOffset={1}>
-                <Checkbox checked={this.state.vbac} label="vbac" onChange={this.handleChange.bind(this, 'vbac')} />
+              <Col mdOffset={1} xsOffset={1}>
+                <Checkbox checked={this.state.vbac} label="VBAC" onChange={this.handleChange.bind(this, 'vbac')} />
                 <Checkbox
                   checked={this.state.multiples}
-                  label="multiples"
+                  label="Multiple Births"
                   onChange={this.handleChange.bind(this, 'multiples')}
                 />
                 <Checkbox
                   checked={this.state.premature}
-                  label="premature"
+                  label="Premature Births"
                   onChange={this.handleChange.bind(this, 'premature')}
                 />
                 <Checkbox
                   checked={this.state.nursingLactation}
-                  label="nursingLactation"
+                  label="Nursing/Lactation Consulting"
                   onChange={this.handleChange.bind(this, 'nursingLactation')}
                 />
                 <Checkbox
                   checked={this.state.highRisk}
-                  label="highRisk"
+                  label="High Risk Pregnancies"
                   onChange={this.handleChange.bind(this, 'highRisk')}
                 />
                 <Checkbox
                   checked={this.state.lgbtqFamily}
-                  label="lgbtqFamily"
+                  label="LGBTQ Families"
                   onChange={this.handleChange.bind(this, 'lgbtqFamily')}
                 />
               </Col>
-              <Col mdOffset={2} xsOffset={1}>
+              <Col mdOffset={1} xsOffset={1}>
                 <Checkbox checked={this.state.teen} label="teen" onChange={this.handleChange.bind(this, 'teen')} />
                 <Checkbox
                   checked={this.state.singleParent}
-                  label="singleParent"
+                  label="Single Parent Births"
                   onChange={this.handleChange.bind(this, 'singleParent')}
                 />
                 <Checkbox
                   checked={this.state.traumaInformed}
-                  label="traumaInformed"
+                  label="Trauma Informed Birthdays"
                   onChange={this.handleChange.bind(this, 'traumaInformed')}
                 />
                 <Checkbox
                   checked={this.state.familiesOfColor}
-                  label="familiesOfColor"
+                  label="Families of Color"
                   onChange={this.handleChange.bind(this, 'familiesOfColor')}
                 />
                 <Checkbox
                   checked={this.state.adoption}
-                  label="adoption"
+                  label="Adoption Services"
                   onChange={this.handleChange.bind(this, 'adoption')}
                 />
                 <Checkbox
                   checked={this.state.disabilities}
-                  label="disabilities"
+                  label="Disabilities"
                   onChange={this.handleChange.bind(this, 'disabilities')}
                 />
               </Col>
-              <Col mdOffset={2} xsOffset={1}>
+              <Col mdOffset={1} xsOffset={1}>
                 <Checkbox
                   checked={this.state.waterBirth}
-                  label="waterBirth"
+                  label="Water Births"
                   onChange={this.handleChange.bind(this, 'waterBirth')}
                 />
                 <Checkbox
                   checked={this.state.homeBirth}
-                  label="homeBirth"
+                  label="Home Births"
                   onChange={this.handleChange.bind(this, 'homeBirth')}
                 />
                 <Checkbox
                   checked={this.state.hospitalAdvocacy}
-                  label="hospitalAdvocacy"
+                  label="Hospital Advocacy"
                   onChange={this.handleChange.bind(this, 'hospitalAdvocacy')}
                 />
                 <Checkbox
                   checked={this.state.prenatalYoga}
-                  label="prenatalYoga"
+                  label="Prenatal Yoga"
                   onChange={this.handleChange.bind(this, 'prenatalYoga')}
                 />
               </Col>
