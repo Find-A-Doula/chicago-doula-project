@@ -1,0 +1,8 @@
+.doulaYearsText {
+	font-size: 1.2em;
+	margin-top: 30px;
+}
+
+div[data-react-toolbox=dialog] > section{
+overflow: auto;
+}

@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-// import './user-survey.css';
 import Checkbox from 'react-toolbox/lib/checkbox';
-import Slider from 'react-toolbox/lib/slider';
 import Input from 'react-toolbox/lib/input';
+import Dropdown from 'react-toolbox/lib/dropdown';
 import { Card, CardTitle, CardText } from 'react-toolbox/lib/card';
-// import { Button, IconButton } from 'react-toolbox/lib/button';
 import Button from 'react-toolbox/lib/button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-// import theme from './survey.css';
+import './survey.css';
+
+const years = [
+  { value: '0-1', label: '0-1' },
+  { value: '1-2', label: '1-2' },
+  { value: '2-5', label: '2-5' },
+  { value: '5-10', label: '5-10' },
+  { value: '10+', label: '10+' }
+];
 
 class BirthDoulaSurvey extends Component {
   state = {
@@ -48,10 +54,8 @@ class BirthDoulaSurvey extends Component {
     this.setState({ ...this.state, [name]: value });
   };
 
-  handleSliderChange = (slider, value) => {
-    const newState = {};
-    newState[slider] = value;
-    this.setState(newState);
+  handleDropdownChange = value => {
+    this.setState({ doulaYearsOfExperiences: value });
   };
 
   render() {
@@ -99,18 +103,19 @@ class BirthDoulaSurvey extends Component {
 
           <div id="question03">
             <Row center="xs">
-              <Card style={{ width: '450px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <CardTitle title="I am looking for a doula with at least ___ years of experience:" />
-                <Slider
-                  pinned
-                  snaps
-                  min={0}
-                  max={10}
-                  step={1}
-                  editable
-                  value={this.state.doulaYearsOfExperiences}
-                  onChange={this.handleSliderChange.bind(this, 'doulaYearsOfExperiences')}
-                />
+              <Card style={{ width: '650px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
+                <Row center="xs">
+
+                  <div><p className="doulaYearsText">I am looking for a doula with at least</p></div>
+
+                  <Dropdown
+                    auto
+                    onChange={this.handleDropdownChange}
+                    source={years}
+                    value={this.state.doulaYearsOfExperiences}
+                  />
+                  <div><p className="doulaYearsText">years of experience.</p></div>
+                </Row>
               </Card>
             </Row>
           </div>

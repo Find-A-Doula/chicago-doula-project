@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import theme from './user-survey.css';
+import './user-survey.css';
 import Dropdown from 'react-toolbox/lib/dropdown';
 import { Grid, Row } from 'react-flexbox-grid';
 import { BirthDoulaSurvey, PostpartumDoulaSurvey } from '../../components/Surveys';
