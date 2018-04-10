@@ -7,14 +7,6 @@ import Button from 'react-toolbox/lib/button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './survey.css';
 
-const years = [
-  { value: '0-1', label: '0-1' },
-  { value: '1-2', label: '1-2' },
-  { value: '2-5', label: '2-5' },
-  { value: '5-10', label: '5-10' },
-  { value: '10+', label: '10+' }
-];
-
 class PostpartumDoulaSurvey extends Component {
   state = {
     // Doula Type
@@ -57,7 +49,7 @@ class PostpartumDoulaSurvey extends Component {
 
           <div id="question02">
             <Row center="xs">
-              <Card style={{ width: '450px', backgroundColor: '#f2ece3' }}>
+              <div>
                 <CardTitle title="About Your Pregnancy:" />
 
                 <Row start="xs">
@@ -74,32 +66,13 @@ class PostpartumDoulaSurvey extends Component {
                     />
                   </CardText>
                 </Row>
-              </Card>
-            </Row>
-          </div>
-
-          <div id="question03">
-            <Row center="xs">
-              <Card style={{ width: '650px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <Row center="xs">
-
-                  <div><p className="doulaYearsText">I am looking for a doula with at least</p></div>
-
-                  <Dropdown
-                    auto
-                    onChange={this.handleDropdownChange}
-                    source={years}
-                    value={this.state.doulaYearsOfExperiences}
-                  />
-                  <div><p className="doulaYearsText">years of experience.</p></div>
-                </Row>
-              </Card>
+              </div>
             </Row>
           </div>
 
           <div id="question04">
             <Row center="xs">
-              <Card style={{ width: '850px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
+              <div>
                 <CardTitle title="Are you looking for a doula with experience in any of the following? (Check all that apply)" />
 
                 <Row start="xs">
@@ -164,7 +137,7 @@ class PostpartumDoulaSurvey extends Component {
                   </Col>
 
                 </Row>
-              </Card>
+              </div>
             </Row>
           </div>
 

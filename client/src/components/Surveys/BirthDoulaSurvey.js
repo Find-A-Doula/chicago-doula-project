@@ -8,9 +8,8 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import './survey.css';
 
 const years = [
-  { value: '0-1', label: '0-1' },
-  { value: '1-2', label: '1-2' },
-  { value: '2-5', label: '2-5' },
+  { value: '0-3', label: '0-3' },
+  { value: '3-5', label: '3-5' },
   { value: '5-10', label: '5-10' },
   { value: '10+', label: '10+' }
 ];
@@ -101,29 +100,10 @@ class BirthDoulaSurvey extends Component {
             </Row>
           </div>
 
-          <div id="question03">
-            <Row center="xs">
-              <Card style={{ width: '650px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <Row center="xs">
-
-                  <div><p className="doulaYearsText">I am looking for a doula with at least</p></div>
-
-                  <Dropdown
-                    auto
-                    onChange={this.handleDropdownChange}
-                    source={years}
-                    value={this.state.doulaYearsOfExperiences}
-                  />
-                  <div><p className="doulaYearsText">years of experience.</p></div>
-                </Row>
-              </Card>
-            </Row>
-          </div>
-
           <div id="question04">
             <Row center="xs">
               <Card style={{ width: '850px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <CardTitle title="Are you looking for a doula with experience in any of the following? (Check all that apply)" />
+                <CardTitle title="I'd like my doula with skills in: (Check all that apply)" />
 
                 <Row start="xs">
                   <Col mdOffset={1} xsOffset={1}>
@@ -167,7 +147,7 @@ class BirthDoulaSurvey extends Component {
                     />
                     <Checkbox
                       checked={this.state.traumaInformed}
-                      label="Trauma Informed Birthdays"
+                      label="Trauma Informed Births"
                       onChange={this.handleChange.bind(this, 'traumaInformed')}
                     />
                     <Checkbox
