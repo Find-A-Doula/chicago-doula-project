@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexboxgrid'
+import { Grid, Row, Col } from 'react-flexbox-grid'
 import CTAForm from '../../components/CTAForm';
 import ButtonLearn from '../../components/ButtonLearn'
 import ButtonSignUp from '../../components/ButtonSignUp'
 import './home.css';
 import axios from 'axios';
+import Typed from 'typed.js';
+
+var options = {
+  strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+  typeSpeed: 40
+};
 
 class Home extends Component {
   state = {
     userEmail: '',
     showCTA: true
   };
+
+
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -50,37 +58,35 @@ class Home extends Component {
   render() {
     return (
       <Grid fluid>
-      <div className="landing-page">        <Col xs={12}>
+      <div className="landing-page">       
       
       <Row center="xs">
-        <Col xs={6} />
         <div >
-        <center>
+
         <h1>
-        <img className="logo" height='200px' padding='20px' src="/images/Chicago_DoulaPoject_pink_sm.png">
+        <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_BIG-01.png">
         </img>
         </h1>
-        </center>
+
         </div>
       </Row>
-      <Row>
-      <center>
+      <Row center="xs">       
+
+       
+      var typed = new Typed(".element", options);
         Doula is ____________
-        </center>
+
       </Row>
-      <Row>
-      <center>
-      <Col>
+      <Row center="xs">
+
       <ButtonLearn 
       handleFormSubmit={this.handleButtonLearn}
       />  
       <ButtonSignUp 
       handleFormSubmit={this.handleButtonSignUp}
       /> 
-      </Col>
-      </center>
+
       </Row>
-      </Col>
       {this.state.showCTA ? (
           <CTAForm
             userEmail={this.state.userEmail}
