@@ -43,18 +43,14 @@ class PostpartumDoulaSurvey extends Component {
   render() {
     return (
       <Grid fluid>
-        <div
-          style={{
-            backgroundImage: 'localhost:3000/client/src/assets/img/baby.jpg'
-          }}
-        >
+        <div className="baby-background">
 
           <div id="question02">
-            <Row center="xs">
+            <Row>
               <div>
                 <h3 className="questionTitle">About Your Pregnancy:</h3>
 
-                <Row start="xs">
+                <Row>
                   <Col mdOffset={1} xsOffset={1}>
                     <Checkbox
                       checked={this.state.firstChild}
@@ -76,7 +72,7 @@ class PostpartumDoulaSurvey extends Component {
           </div>
 
           <div id="question04">
-            <Row center="xs">
+            <Row>
               <div>
                 <h3 className="questionTitle">
                   Are you looking for a doula with experience in any of the following? (Check all that apply)
@@ -149,13 +145,13 @@ class PostpartumDoulaSurvey extends Component {
           </div>
 
           <div id="question05">
-            <Row center="xs">
+            <Row>
 
               <h3 className="questionTitle">
                 Please Enter Your Zip Code:
               </h3>
             </Row>
-            <Row center="xs">
+            <Row>
               <Input
                 type="text"
                 label="Your Zip Code"
@@ -168,7 +164,7 @@ class PostpartumDoulaSurvey extends Component {
           </div>
 
           <div className="submitSurvey">
-            <Row center="xs">
+            <Row>
               <Button type="submit" raised style={{ marginTop: '40px', marginBottom: '40px' }}>Submit</Button>
             </Row>
           </div>

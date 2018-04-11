@@ -4,3 +4,22 @@
   --highlight: #f2ece3;
   --lowlight: #ffa592;
 }
+
+.baby-background {    
+    background: url('./assets/img/baby.png') no-repeat;
+    /*background-size: 30px;*/
+    float: right;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+#question02 {
+	position: relative;
+	right: 200px;	
+}
+
+#question04 {
+	position: relative;
+	right: 150px;	
+}
