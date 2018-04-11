@@ -1,0 +1,39 @@
+.delivering-page .logo,  {
+	padding: 20px 40px;
+	font-size: 10px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	margin-bottom: 40px;
+	width: 50px;
+}
+
+.delivering-page {
+	width: 100%;
+	background-size: cover;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	background-color: #fff7e7;
+	color: #2c3d50;
+}
+
+.delivering-page h1,  {
+	padding: 20px 40px;
+	font-size: 50px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	letter-spacing: 1px;
+	padding-top: 180px;
+	margin-bottom: 20px;
+	width: 100px;
+}
+
+
+.stork {
+	margin-top: 100px;
+}
