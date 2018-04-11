@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 import Checkbox from 'react-toolbox/lib/checkbox';
 import Input from 'react-toolbox/lib/input';
-import Dropdown from 'react-toolbox/lib/dropdown';
 import { Card, CardTitle, CardText } from 'react-toolbox/lib/card';
 import Button from 'react-toolbox/lib/button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './survey.css';
-
-const years = [
-  { value: '0-3', label: '0-3' },
-  { value: '3-5', label: '3-5' },
-  { value: '5-10', label: '5-10' },
-  { value: '10+', label: '10+' }
-];
 
 class BirthDoulaSurvey extends Component {
   state = {
@@ -64,11 +56,11 @@ class BirthDoulaSurvey extends Component {
 
           <div id="question02">
             <Row center="xs">
-              <Card style={{ width: '450px', backgroundColor: '#f2ece3' }}>
-                <CardTitle title="About Your Pregnancy:" />
+              <div>
+                <h3 className="questionTitle">About Your Pregnancy:</h3>
 
                 <Row start="xs">
-                  <CardText style={{ paddingLeft: '60px' }}>
+                  <Col mdOffset={1} xsOffset={1}>
                     <Checkbox
                       checked={this.state.firstPregnancy}
                       label="This is my first pregnancy."
@@ -94,9 +86,9 @@ class BirthDoulaSurvey extends Component {
                       label="I've terminated a previous pregnancy."
                       onChange={this.handleChange.bind(this, 'previousPregnancyTerminated')}
                     />
-                  </CardText>
+                  </Col>
                 </Row>
-              </Card>
+              </div>
             </Row>
           </div>
 

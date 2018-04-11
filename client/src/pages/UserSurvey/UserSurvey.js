@@ -26,7 +26,6 @@ class UserSurvey extends Component {
   render() {
     return (
       <Grid fluid>
-
         <div id="question01">
           <Row center="xs">
             <div><h2 className="first-question">I am looking for a</h2></div>
@@ -37,7 +36,6 @@ class UserSurvey extends Component {
 
         {this.state.doulaType === 'birthDoula' ? <BirthDoulaSurvey /> : <div />}
         {this.state.doulaType === 'postpartumDoula' ? <PostpartumDoulaSurvey /> : <div />}
-
       </Grid>
     );
   }

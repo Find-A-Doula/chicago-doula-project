@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Checkbox from 'react-toolbox/lib/checkbox';
 import Input from 'react-toolbox/lib/input';
-import Dropdown from 'react-toolbox/lib/dropdown';
-import { Card, CardTitle, CardText } from 'react-toolbox/lib/card';
 import Button from 'react-toolbox/lib/button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './survey.css';
@@ -45,7 +43,11 @@ class PostpartumDoulaSurvey extends Component {
   render() {
     return (
       <Grid fluid>
-        <div>
+        <div
+          style={{
+            backgroundImage: 'localhost:3000/client/src/assets/img/baby.jpg'
+          }}
+        >
 
           <div id="question02">
             <Row center="xs">
