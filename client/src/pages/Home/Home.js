@@ -5,12 +5,7 @@ import ButtonLearn from '../../components/ButtonLearn'
 import ButtonSignUp from '../../components/ButtonSignUp'
 import './home.css';
 import axios from 'axios';
-import Typed from 'typed.js';
 
-var options = {
-  strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-  typeSpeed: 40
-};
 
 class Home extends Component {
   state = {
@@ -71,22 +66,8 @@ class Home extends Component {
         </div>
       </Row>
       <Row center="xs">       
-
-       
-      var typed = new Typed(".element", options);
-        Doula is ____________
-
       </Row>
-      <Row center="xs">
 
-      <ButtonLearn 
-      handleFormSubmit={this.handleButtonLearn}
-      />  
-      <ButtonSignUp 
-      handleFormSubmit={this.handleButtonSignUp}
-      /> 
-
-      </Row>
       {this.state.showCTA ? (
           <CTAForm
             userEmail={this.state.userEmail}
@@ -98,7 +79,18 @@ class Home extends Component {
             <h3>Thank you! We will be in touch!</h3>
           </div>
         )}
+        <Row center="xs">
+
+        <ButtonLearn 
+        handleFormSubmit={this.handleButtonLearn}
+        />  
+        <ButtonSignUp 
+        handleFormSubmit={this.handleButtonSignUp}
+        /> 
+  
+        </Row>
       </div>
+      
       </Grid>
     );
   }
