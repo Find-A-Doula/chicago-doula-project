@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row } from 'react-flexbox-grid';
+import { Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
 import ButtonLearn from '../../components/ButtonLearn';
 import ButtonSignUp from '../../components/ButtonSignUp';
@@ -44,43 +44,26 @@ class Home extends Component {
 
   render() {
     return (
-
       <div className="landing-page">
 
         <Row center="xs">
           <div>
 
-            <h1>
-              <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_MAIN.png" alt="logo" />>
-            </h1>
+            <img className="logo" width="700px" padding="20px" src="/images/CDP_LOGO_MAIN.png" alt="logo" />
 
-        </div>
-      </Row>
-      <Row center="xs">       
-      </Row>
-
-      {this.state.showCTA ? (
-          <CTAForm
-            userEmail={this.state.userEmail}
-            handleInputChange={this.handleInputChange}
-            handleFormSubmit={this.handleFormSubmit}
-          />
-        ) : (
-          <div id="CTAconfirmation">
-            <h3>Thank you! We will be in touch!</h3>
           </div>
         </Row>
-        <Row center="xs" />
-
-        {this.state.showCTA
-          ? <CTAForm
-              userEmail={this.state.userEmail}
-              handleInputChange={this.handleInputChange}
-              handleFormSubmit={this.handleFormSubmit}
-            />
-          : <div id="CTAconfirmation">
-              <h3>Thank you! We will be in touch!</h3>
-            </div>}
+        <Row center="xs" style={{ marginTop: '40px' }}>
+          {this.state.showCTA
+            ? <CTAForm
+                userEmail={this.state.userEmail}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+              />
+            : <div id="CTAconfirmation">
+                <h3>Thank you! We will be in touch!</h3>
+              </div>}
+        </Row>
         <Row center="xs">
 
           <ButtonLearn handleFormSubmit={this.handleButtonLearn} />

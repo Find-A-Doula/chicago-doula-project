@@ -7,8 +7,8 @@
 	display: block;
 	letter-spacing: 1px;
 	padding-top: 10px;
-	margin-bottom: 20px;
-	width: 100px;
+	margin-bottom: 40px;
+	width: 50px;
 }
 
 .landing-page {
@@ -36,4 +36,8 @@
 #CTAconfirmation {
 	text-align: center;
 	padding-top: 2px;
+}
+
+.logo {
+	margin-top: 100px;
 }
