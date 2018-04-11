@@ -50,21 +50,24 @@ class PostpartumDoulaSurvey extends Component {
           <div id="question02">
             <Row center="xs">
               <div>
-                <CardTitle title="About Your Pregnancy:" />
+                <h3 className="questionTitle">About Your Pregnancy:</h3>
 
                 <Row start="xs">
-                  <CardText style={{ paddingLeft: '60px' }}>
+                  <Col mdOffset={1} xsOffset={1}>
                     <Checkbox
                       checked={this.state.firstChild}
                       label="This is my first child."
                       onChange={this.handleChange.bind(this, 'firstChild')}
                     />
+                  </Col>
+                  <Col mdOffset={1} xsOffset={1}>
                     <Checkbox
                       checked={this.state.haveChildren}
                       label="I have children."
                       onChange={this.handleChange.bind(this, 'haveChildren')}
                     />
-                  </CardText>
+                  </Col>
+
                 </Row>
               </div>
             </Row>
@@ -73,7 +76,9 @@ class PostpartumDoulaSurvey extends Component {
           <div id="question04">
             <Row center="xs">
               <div>
-                <CardTitle title="Are you looking for a doula with experience in any of the following? (Check all that apply)" />
+                <h3 className="questionTitle">
+                  Are you looking for a doula with experience in any of the following? (Check all that apply)
+                </h3>
 
                 <Row start="xs">
                   <Col mdOffset={1} xsOffset={1}>
@@ -143,21 +148,20 @@ class PostpartumDoulaSurvey extends Component {
 
           <div id="question05">
             <Row center="xs">
-              <Card style={{ width: '450px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <CardTitle title="Please Enter Your Zip Code:" />
 
-                <CardText>
-                  <Input
-                    type="text"
-                    label="Your Zip Code"
-                    name="userZipCode"
-                    value={this.state.userZipCode}
-                    onChange={this.handleChange.bind(this, 'userZipCode')}
-                    maxLength={5}
-                  />
-                </CardText>
-
-              </Card>
+              <h3 className="questionTitle">
+                Please Enter Your Zip Code:
+              </h3>
+            </Row>
+            <Row center="xs">
+              <Input
+                type="text"
+                label="Your Zip Code"
+                name="userZipCode"
+                value={this.state.userZipCode}
+                onChange={this.handleChange.bind(this, 'userZipCode')}
+                maxLength={5}
+              />
             </Row>
           </div>
 

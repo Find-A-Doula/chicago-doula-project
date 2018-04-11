@@ -3,6 +3,12 @@
 	margin-top: 30px;
 }
 
-div[data-react-toolbox=dialog] > section{
-overflow: auto;
+.questionTitle {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.4em;
+}
+
+span {
+	font-family: 'Cabin', sans-serif;
+	font-size: 1em !important;
 }
