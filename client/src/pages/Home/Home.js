@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexboxgrid'
 import CTAForm from '../../components/CTAForm';
+import ButtonLearn from '../../components/ButtonLearn'
+import ButtonSignUp from '../../components/ButtonSignUp'
 import './home.css';
 import axios from 'axios';
 
@@ -31,21 +33,52 @@ class Home extends Component {
     });
   };
 
+  handleButtonLearn = event => {
+    event.preventDefault();
+
+    // Learn Button pressed, link to display
+
+  };
+
+  handleButtonSignUp = event => {
+    event.preventDefault();
+
+    // SignUp Button pressed, link to display
+
+  };
+
   render() {
     return (
       <div className="landing-page">        <Col xs={12}>
+      
       <Row start="xs">
         <Col xs={6} />
-        <div className="logo">
-        logo goes here and centered
+        <div >
+        <center>
+        <h1>
+        <img className="logo" height='200px' padding='20px' src="/images/Chicago_DoulaPoject_pink_sm.png">
+        </img>
+        </h1>
+        </center>
         </div>
       </Row>
       <Row>
+      <center>
         Doula is ____________
+        </center>
       </Row>
-    </Col>
-        <h1>Chicago Doula Project</h1>
-        {this.state.showCTA ? (
+      <Row>
+      <center>
+      <ButtonLearn 
+      handleFormSubmit={this.handleButtonLearn}
+      />  
+      <ButtonSignUp 
+      handleFormSubmit={this.handleButtonSignUp}
+      /> 
+      </center>
+      </Row>
+      </Col>
+      {this.state.showCTA ? (
           <CTAForm
             userEmail={this.state.userEmail}
             handleInputChange={this.handleInputChange}
