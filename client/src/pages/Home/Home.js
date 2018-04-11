@@ -44,15 +44,30 @@ class Home extends Component {
 
   render() {
     return (
+
       <div className="landing-page">
 
         <Row center="xs">
           <div>
 
             <h1>
-              <img className="logo" height="200px" padding="20px" src="/images/CDP_LOGO_BIG-01.png" alt="logo" />
+              <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_MAIN.png" alt="logo" />>
             </h1>
 
+        </div>
+      </Row>
+      <Row center="xs">       
+      </Row>
+
+      {this.state.showCTA ? (
+          <CTAForm
+            userEmail={this.state.userEmail}
+            handleInputChange={this.handleInputChange}
+            handleFormSubmit={this.handleFormSubmit}
+          />
+        ) : (
+          <div id="CTAconfirmation">
+            <h3>Thank you! We will be in touch!</h3>
           </div>
         </Row>
         <Row center="xs" />
