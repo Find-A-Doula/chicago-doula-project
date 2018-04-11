@@ -59,7 +59,7 @@ class Home extends Component {
         <div >
 
         <h1>
-        <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_BIG-01.png">
+        <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_MAIN.png">
         </img>
         </h1>
 
