@@ -42,10 +42,7 @@ body{
   background: #2c3d50;
   font-size: 46px;
   border-radius: 12px;
-   &:focus {
-    outline: 1px dotted white;
-    outline-offset: -4px;
-  }
+  
 }
 
 

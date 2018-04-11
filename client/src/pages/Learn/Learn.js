@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './learn.css';
 import axios from 'axios';
-import why_one from '../../assets/img/learnDoula/one.png';
-import why_two from '../../assets/img/learnDoula/two.png';
-import why_three from '../../assets/img/learnDoula/three.png';
-import why_four from '../../assets/img/learnDoula/four.png';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import WhyDoula from '../../components/WhyDoula';
 
@@ -12,9 +8,26 @@ const info = {
   sections: [
     {
       key: '01',
-      title: 'What is a Doula?',
-      logo: './../assets/img/learnDoula/one.png',
+      logo: './../../assets/img/learnDoula/one.png',
       reason: 'Parental Support',
+      explanation: 'A professional trained in childbirth who provides constant physical and emotional support to families before, during and after pregnancy to help them achieve most satisfying birth experience possible.'
+    },
+    {
+      key: '02',
+      logo: './../assets/img/learnDoula/two.png',
+      reason: 'POSTPARTUM SUPPORT',
+      explanation: 'A professional trained in childbirth who provides constant physical and emotional support to families before, during and after pregnancy to help them achieve most satisfying birth experience possible.'
+    },
+    {
+      key: '03',
+      logo: './../assets/img/learnDoula/three.png',
+      reason: 'EMOTIONAL SUPPORT',
+      explanation: 'A professional trained in childbirth who provides constant physical and emotional support to families before, during and after pregnancy to help them achieve most satisfying birth experience possible.'
+    },
+    {
+      key: '04',
+      logo: './../assets/img/learnDoula/four.png',
+      reason: 'MUCH MORE',
       explanation: 'A professional trained in childbirth who provides constant physical and emotional support to families before, during and after pregnancy to help them achieve most satisfying birth experience possible.'
     }
   ]
@@ -40,46 +53,6 @@ class Learn extends Component {
               <div>
                 {info.sections.map(section => <WhyDoula section={section} key={section.key} />)}
               </div>
-
-              <Row center="xs" className="doula-reasons">
-                <Col xs={12} sm={4}>
-                  <img src={why_one} />
-                </Col>
-                <Col xs={12} sm={8} right="xs">
-                  <h3>Parental Support</h3>
-                  <p>Doulas are trained to assist families and provide informational after the baby is born.</p>
-                </Col>
-              </Row>
-
-              <Row center="xs" className="doula-reasons">
-                <Col xs={12} sm={4} left="xs">
-                  <img src={why_two} />
-                </Col>
-                <Col xs={12} sm={8} right="xs">
-                  <h3>POSTPARTUM SUPPORT</h3>
-                  <p>Doulas are trained to assist families and provide informational after the baby is born.</p>
-                </Col>
-              </Row>
-
-              <Row center="xs" className="doula-reasons">
-                <Col xs={12} sm={4} left="xs">
-                  <img src={why_three} />
-                </Col>
-                <Col xs={12} sm={8} right="xs">
-                  <h3>EMOTIONAL SUPPORT</h3>
-                  <p>Doulas are trained to assist families and provide informational after the baby is born.</p>
-                </Col>
-              </Row>
-
-              <Row center="xs" className="doula-reasons">
-                <Col xs={12} sm={4} left="xs">
-                  <img src={why_four} />
-                </Col>
-                <Col xs={12} sm={8} right="xs">
-                  <h3>MUCH MORE </h3>
-                  <p>Doulas are trained to assist families and provide informational after the baby is born.</p>
-                </Col>
-              </Row>
               <Row center="xs" center="xs">
                 <button class="button">Find a Doula</button>
               </Row>
