@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import UserSurvey from './pages/UserSurvey';
+import Learn from './pages/Learn';
 import './assets/react-toolbox/theme.css';
 import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
@@ -13,6 +14,7 @@ const App = () => (
 			<Router>
 				<Switch>
 					<Route path="/search" component={UserSurvey} />
+					<Route path="/learn" component={Learn} />
 					<Route path="/" component={Home} />
 				</Switch>
 			</Router>
