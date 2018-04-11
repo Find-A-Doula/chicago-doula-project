@@ -26,14 +26,16 @@
 }
 
 #CTA-button {
-  color: rgb(255, 255, 255);
+  color: #000000;
+  border-radius: 10px;
   cursor: pointer;
   height: 46px;
   letter-spacing: 1px;
   padding: 10px 23px;
   text-transform: uppercase;
-  background: rgb(234, 8, 139) none repeat scroll 0% 0% / auto padding-box border-box;
-  border: 2px solid rgb(234, 8, 139);
+      font-family: 'Raleway', sans-serif;
+  background: rgb(255, 165, 146) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 2px solid rgb(255, 165, 146);
   font: normal normal 600 normal 16px / 20px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-appearance: none;
 }
