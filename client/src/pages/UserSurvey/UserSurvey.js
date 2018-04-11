@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './user-survey.css';
 import Checkbox from 'react-toolbox/lib/checkbox';
-import Input from 'react-toolbox/lib/input';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class UserSurvey extends Component {

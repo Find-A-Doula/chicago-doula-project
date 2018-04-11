@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid, Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
-import ButtonLearn from '../../components/ButtonLearn'
-import ButtonSignUp from '../../components/ButtonSignUp'
+import ButtonLearn from '../../components/ButtonLearn';
+import ButtonSignUp from '../../components/ButtonSignUp';
 import './home.css';
 import axios from 'axios';
-
 
 class Home extends Component {
   state = {
@@ -13,18 +12,13 @@ class Home extends Component {
     showCTA: true
   };
 
-
-
   handleFormSubmit = event => {
     event.preventDefault();
 
     // Post email to ctaemails collection
-    axios
-      .post('/cta', { email: this.state.userEmail })
-      .then(this.setState({ showCTA: false }))
-      .catch(error => {
-        console.log(error.response);
-      });
+    axios.post('/cta', { email: this.state.userEmail }).then(this.setState({ showCTA: false })).catch(error => {
+      console.log(error.response);
+    });
   };
 
   handleInputChange = event => {
@@ -40,28 +34,25 @@ class Home extends Component {
     event.preventDefault();
 
     // Learn Button pressed, link to display
-
   };
 
   handleButtonSignUp = event => {
     event.preventDefault();
 
     // SignUp Button pressed, link to display
-
   };
 
   render() {
     return (
-      <Grid fluid>
-      <div className="landing-page">       
-      
-      <Row center="xs">
-        <div >
 
-        <h1>
-        <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_MAIN.png">
-        </img>
-        </h1>
+      <div className="landing-page">
+
+        <Row center="xs">
+          <div>
+
+            <h1>
+              <img className="logo" height='200px' padding='20px' src="/images/CDP_LOGO_MAIN.png" alt="logo" />>
+            </h1>
 
         </div>
       </Row>
@@ -78,20 +69,25 @@ class Home extends Component {
           <div id="CTAconfirmation">
             <h3>Thank you! We will be in touch!</h3>
           </div>
-        )}
+        </Row>
+        <Row center="xs" />
+
+        {this.state.showCTA
+          ? <CTAForm
+              userEmail={this.state.userEmail}
+              handleInputChange={this.handleInputChange}
+              handleFormSubmit={this.handleFormSubmit}
+            />
+          : <div id="CTAconfirmation">
+              <h3>Thank you! We will be in touch!</h3>
+            </div>}
         <Row center="xs">
 
-        <ButtonLearn 
-        handleFormSubmit={this.handleButtonLearn}
-        />  
-        <ButtonSignUp 
-        handleFormSubmit={this.handleButtonSignUp}
-        /> 
-  
+          <ButtonLearn handleFormSubmit={this.handleButtonLearn} />
+          <ButtonSignUp handleFormSubmit={this.handleButtonSignUp} />
+
         </Row>
       </div>
-      
-      </Grid>
     );
   }
 }
