@@ -49,9 +49,10 @@ class Home extends Component {
 
   render() {
     return (
+      <Grid fluid>
       <div className="landing-page">        <Col xs={12}>
       
-      <Row start="xs">
+      <Row center="xs">
         <Col xs={6} />
         <div >
         <center>
@@ -69,12 +70,14 @@ class Home extends Component {
       </Row>
       <Row>
       <center>
+      <Col>
       <ButtonLearn 
       handleFormSubmit={this.handleButtonLearn}
       />  
       <ButtonSignUp 
       handleFormSubmit={this.handleButtonSignUp}
       /> 
+      </Col>
       </center>
       </Row>
       </Col>
@@ -90,6 +93,7 @@ class Home extends Component {
           </div>
         )}
       </div>
+      </Grid>
     );
   }
 }
