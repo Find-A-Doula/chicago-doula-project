@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './user-survey.css';
 import Dropdown from 'react-toolbox/lib/dropdown';
 import background from '../../assets/img/baby.png';
-import { Grid, Row } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import { BirthDoulaSurvey, PostpartumDoulaSurvey } from '../../components/Surveys';
 
 const doulas = [{ value: 'birthDoula', label: 'Birth' }, { value: 'postpartumDoula', label: 'Postpartum' }];
@@ -27,13 +27,15 @@ class UserSurvey extends Component {
   render() {
     return (
       <div>
-        <img src={background} className="search-background" />
+        <img src={background} className="search-background" alt="Background" />
         <Grid fluid>
           <div id="question01">
             <Row center="xs">
-              <div><h2 className="first-question">I am looking for a</h2></div>
-              <Dropdown auto onChange={this.handleDropdownChange} source={doulas} value={this.state.doulaType} />
-              <div><h2>doula.</h2></div>
+              <Col xs={12} sm={5}><h2 className="first-question">I am looking for a</h2></Col>
+              <Col xs={6} sm={3}>
+                <Dropdown auto onChange={this.handleDropdownChange} source={doulas} value={this.state.doulaType} />
+              </Col>
+              <Col xs={12} sm={2}><h2>doula.</h2></Col>
             </Row>
           </div>
 

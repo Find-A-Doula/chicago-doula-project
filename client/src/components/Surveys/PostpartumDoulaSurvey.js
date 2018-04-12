@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Checkbox from 'react-toolbox/lib/checkbox/Checkbox';
 import Input from 'react-toolbox/lib/input/Input';
 import Button from 'react-toolbox/lib/button/Button';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import './survey.css';
 
 class PostpartumDoulaSurvey extends Component {

@@ -31,6 +31,19 @@ img.search-background {
   right: 0;
 }
 
+/* Dropdown menu value */
+#question01 > div > div > div > div > input {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	padding-top: 0px;
+}
+
+/* Checkbox values */
+#question01 > div > div > div > div > input {
+
+}
+
 @media screen and (max-width: 800px) { 
   img.search-background {
     right: 50%;
@@ -43,6 +56,7 @@ img.search-background {
     display: none;
   }
 }
+
 
 
 
