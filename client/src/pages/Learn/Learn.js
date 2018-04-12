@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './learn.css';
-import axios from 'axios';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import WhyDoula from '../../components/WhyDoula';
 
 const info = {
@@ -53,7 +52,7 @@ class Learn extends Component {
               <div>
                 {info.sections.map(section => <WhyDoula section={section} key={section.key} />)}
               </div>
-              <Row center="xs" center="xs">
+              <Row center="xs">
                 <button class="button">Find a Doula</button>
               </Row>
 
