@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './user-survey.css';
 import Dropdown from 'react-toolbox/lib/dropdown';
+import background from '../../assets/img/baby.png';
 import { Grid, Row } from 'react-flexbox-grid';
 import { BirthDoulaSurvey, PostpartumDoulaSurvey } from '../../components/Surveys';
 
@@ -25,7 +26,8 @@ class UserSurvey extends Component {
 
   render() {
     return (
-      <div className="survey-wrapper">
+      <div>
+        <img src={background} className="search-background" />
         <Grid fluid>
           <div id="question01">
             <Row center="xs">
