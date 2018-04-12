@@ -29,6 +29,8 @@ img.search-background {
   position: fixed;
   bottom: 0;
   right: 0;
+
+  z-index: -99999;
 }
 
 /* Dropdown menu value */
@@ -39,15 +41,18 @@ img.search-background {
 	padding-top: 0px;
 }
 
-/* Checkbox values */
-#question01 > div > div > div > div > input {
-
-}
-
 @media screen and (max-width: 800px) { 
   img.search-background {
     right: 50%;
     margin-right: -400px;
+  }
+}
+
+@media screen and (max-width: 575px) { 
+  /* Dropdown menu */
+  #question01 > div > div > div > div {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 }
 
@@ -56,21 +61,5 @@ img.search-background {
     display: none;
   }
 }
-
-
-
-
-/*.question {
-	margin-top: 2%;
-	font-weight: bold;
-}*/
-
-/*h2 {
-	text-align: center;
-}
-
-input {
-	text-align: center;
-}*/
 
 

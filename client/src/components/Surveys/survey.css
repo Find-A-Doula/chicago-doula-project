@@ -1,17 +1,6 @@
-#question02 {
-	position: relative;
-	top: 40px;
-	left: 0px;
-}
-
-#question03 {
-	position: relative;
-	top: 60px;
-}
-
-.doulaYearsText {
-	font-size: 1.2em;
-	margin-top: 30px;
+/* Checkbox labels */
+.checkboxWrapper > label {
+	font-family: 'Cabin', sans-serif;
 }
 
 .questionTitle {
@@ -19,8 +8,11 @@
 	font-size: 1.4em;
 }
 
-/*span {
-	font-family: 'Cabin', sans-serif;
-	font-size: 1em !important;
+.searchSubmit {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: var(--lowlight) !important;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: bold !important;
 }
-*/
+
