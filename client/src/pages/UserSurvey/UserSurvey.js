@@ -25,18 +25,20 @@ class UserSurvey extends Component {
 
   render() {
     return (
-      <Grid fluid>
-        <div id="question01">
-          <Row center="xs">
-            <div><h2 className="first-question">I am looking for a</h2></div>
-            <Dropdown auto onChange={this.handleDropdownChange} source={doulas} value={this.state.doulaType} />
-            <div><h2>doula.</h2></div>
-          </Row>
-        </div>
+      <div className="survey-wrapper">
+        <Grid fluid>
+          <div id="question01">
+            <Row center="xs">
+              <div><h2 className="first-question">I am looking for a</h2></div>
+              <Dropdown auto onChange={this.handleDropdownChange} source={doulas} value={this.state.doulaType} />
+              <div><h2>doula.</h2></div>
+            </Row>
+          </div>
 
-        {this.state.doulaType === 'birthDoula' ? <BirthDoulaSurvey /> : <div />}
-        {this.state.doulaType === 'postpartumDoula' ? <PostpartumDoulaSurvey /> : <div />}
-      </Grid>
+          {this.state.doulaType === 'birthDoula' ? <BirthDoulaSurvey /> : <div />}
+          {this.state.doulaType === 'postpartumDoula' ? <PostpartumDoulaSurvey /> : <div />}
+        </Grid>
+      </div>
     );
   }
 }

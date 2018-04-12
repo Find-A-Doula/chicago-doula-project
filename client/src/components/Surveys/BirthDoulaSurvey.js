@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Checkbox from 'react-toolbox/lib/checkbox';
-import Input from 'react-toolbox/lib/input';
-import { Card, CardTitle, CardText } from 'react-toolbox/lib/card';
+import Checkbox from 'react-toolbox/lib/checkbox/Checkbox';
+import Input from 'react-toolbox/lib/input/Input';
 import Button from 'react-toolbox/lib/button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import './survey.css';
@@ -94,114 +93,113 @@ class BirthDoulaSurvey extends Component {
 
           <div id="question04">
             <Row center="xs">
-              <Card style={{ width: '850px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <CardTitle title="I'd like my doula with skills in: (Check all that apply)" />
 
-                <Row start="xs">
-                  <Col mdOffset={1} xsOffset={1}>
-                    <Checkbox checked={this.state.vbac} label="VBAC" onChange={this.handleChange.bind(this, 'vbac')} />
-                    <Checkbox
-                      checked={this.state.multiples}
-                      label="Multiple Births"
-                      onChange={this.handleChange.bind(this, 'multiples')}
-                    />
-                    <Checkbox
-                      checked={this.state.premature}
-                      label="Premature Births"
-                      onChange={this.handleChange.bind(this, 'premature')}
-                    />
-                    <Checkbox
-                      checked={this.state.nursingLactation}
-                      label="Nursing/Lactation Consulting"
-                      onChange={this.handleChange.bind(this, 'nursingLactation')}
-                    />
-                    <Checkbox
-                      checked={this.state.highRisk}
-                      label="High Risk Pregnancies"
-                      onChange={this.handleChange.bind(this, 'highRisk')}
-                    />
-                    <Checkbox
-                      checked={this.state.lgbtqFamily}
-                      label="LGBTQ Families"
-                      onChange={this.handleChange.bind(this, 'lgbtqFamily')}
-                    />
-                  </Col>
-                  <Col mdOffset={1} xsOffset={1}>
-                    <Checkbox
-                      checked={this.state.teen}
-                      label="Teen Pregnancies"
-                      onChange={this.handleChange.bind(this, 'teen')}
-                    />
-                    <Checkbox
-                      checked={this.state.singleParent}
-                      label="Single Parent Births"
-                      onChange={this.handleChange.bind(this, 'singleParent')}
-                    />
-                    <Checkbox
-                      checked={this.state.traumaInformed}
-                      label="Trauma Informed Births"
-                      onChange={this.handleChange.bind(this, 'traumaInformed')}
-                    />
-                    <Checkbox
-                      checked={this.state.familiesOfColor}
-                      label="Families of Color"
-                      onChange={this.handleChange.bind(this, 'familiesOfColor')}
-                    />
-                    <Checkbox
-                      checked={this.state.adoption}
-                      label="Adoption Services"
-                      onChange={this.handleChange.bind(this, 'adoption')}
-                    />
-                    <Checkbox
-                      checked={this.state.disabilities}
-                      label="Disabilities"
-                      onChange={this.handleChange.bind(this, 'disabilities')}
-                    />
-                  </Col>
-                  <Col mdOffset={1} xsOffset={1}>
-                    <Checkbox
-                      checked={this.state.waterBirth}
-                      label="Water Births"
-                      onChange={this.handleChange.bind(this, 'waterBirth')}
-                    />
-                    <Checkbox
-                      checked={this.state.homeBirth}
-                      label="Home Births"
-                      onChange={this.handleChange.bind(this, 'homeBirth')}
-                    />
-                    <Checkbox
-                      checked={this.state.hospitalAdvocacy}
-                      label="Hospital Advocacy"
-                      onChange={this.handleChange.bind(this, 'hospitalAdvocacy')}
-                    />
-                    <Checkbox
-                      checked={this.state.prenatalYoga}
-                      label="Prenatal Yoga"
-                      onChange={this.handleChange.bind(this, 'prenatalYoga')}
-                    />
-                  </Col>
-                </Row>
-              </Card>
+              <h3 className="questionTitle">I'd like my doula with skills in: (Check all that apply)</h3>
+
+              <Row start="xs">
+                <Col mdOffset={1} xsOffset={1}>
+                  <Checkbox checked={this.state.vbac} label="VBAC" onChange={this.handleChange.bind(this, 'vbac')} />
+                  <Checkbox
+                    checked={this.state.multiples}
+                    label="Multiple Births"
+                    onChange={this.handleChange.bind(this, 'multiples')}
+                  />
+                  <Checkbox
+                    checked={this.state.premature}
+                    label="Premature Births"
+                    onChange={this.handleChange.bind(this, 'premature')}
+                  />
+                  <Checkbox
+                    checked={this.state.nursingLactation}
+                    label="Nursing/Lactation Consulting"
+                    onChange={this.handleChange.bind(this, 'nursingLactation')}
+                  />
+                  <Checkbox
+                    checked={this.state.highRisk}
+                    label="High Risk Pregnancies"
+                    onChange={this.handleChange.bind(this, 'highRisk')}
+                  />
+                  <Checkbox
+                    checked={this.state.lgbtqFamily}
+                    label="LGBTQ Families"
+                    onChange={this.handleChange.bind(this, 'lgbtqFamily')}
+                  />
+                </Col>
+                <Col mdOffset={1} xsOffset={1}>
+                  <Checkbox
+                    checked={this.state.teen}
+                    label="Teen Pregnancies"
+                    onChange={this.handleChange.bind(this, 'teen')}
+                  />
+                  <Checkbox
+                    checked={this.state.singleParent}
+                    label="Single Parent Births"
+                    onChange={this.handleChange.bind(this, 'singleParent')}
+                  />
+                  <Checkbox
+                    checked={this.state.traumaInformed}
+                    label="Trauma Informed Births"
+                    onChange={this.handleChange.bind(this, 'traumaInformed')}
+                  />
+                  <Checkbox
+                    checked={this.state.familiesOfColor}
+                    label="Families of Color"
+                    onChange={this.handleChange.bind(this, 'familiesOfColor')}
+                  />
+                  <Checkbox
+                    checked={this.state.adoption}
+                    label="Adoption Services"
+                    onChange={this.handleChange.bind(this, 'adoption')}
+                  />
+                  <Checkbox
+                    checked={this.state.disabilities}
+                    label="Disabilities"
+                    onChange={this.handleChange.bind(this, 'disabilities')}
+                  />
+                </Col>
+                <Col mdOffset={1} xsOffset={1}>
+                  <Checkbox
+                    checked={this.state.waterBirth}
+                    label="Water Births"
+                    onChange={this.handleChange.bind(this, 'waterBirth')}
+                  />
+                  <Checkbox
+                    checked={this.state.homeBirth}
+                    label="Home Births"
+                    onChange={this.handleChange.bind(this, 'homeBirth')}
+                  />
+                  <Checkbox
+                    checked={this.state.hospitalAdvocacy}
+                    label="Hospital Advocacy"
+                    onChange={this.handleChange.bind(this, 'hospitalAdvocacy')}
+                  />
+                  <Checkbox
+                    checked={this.state.prenatalYoga}
+                    label="Prenatal Yoga"
+                    onChange={this.handleChange.bind(this, 'prenatalYoga')}
+                  />
+                </Col>
+              </Row>
+
             </Row>
           </div>
 
           <div id="question05">
-            <Row center="xs">
-              <Card style={{ width: '450px', backgroundColor: '#f2ece3', marginTop: '40px' }}>
-                <CardTitle title="Please Enter Your Zip Code:" />
+            <Row>
 
-                <CardText>
-                  <Input
-                    type="text"
-                    label="Your Zip Code"
-                    name="userZipCode"
-                    value={this.state.userZipCode}
-                    onChange={this.handleChange.bind(this, 'userZipCode')}
-                    maxLength={5}
-                  />
-                </CardText>
-
-              </Card>
+              <h3 className="questionTitle">
+                Please Enter Your Zip Code:
+              </h3>
+            </Row>
+            <Row>
+              <Input
+                type="text"
+                label="Your Zip Code"
+                name="userZipCode"
+                value={this.state.userZipCode}
+                onChange={this.handleChange.bind(this, 'userZipCode')}
+                maxLength={5}
+              />
             </Row>
           </div>
 

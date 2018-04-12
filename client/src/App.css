@@ -5,21 +5,43 @@
   --lowlight: #ffa592;
 }
 
-.baby-background {    
-    background: url('./assets/img/baby.png') no-repeat;
-    /*background-size: 30px;*/
-    float: right;
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
+.survey-background {    
+/*  background: url('./assets/img/baby.png') no-repeat bottom right;
+  width: 100%;
+  height: 100%;
+	position: fixed;
+  bottom: 0;
+  right: 0;*/
+	/*bottom: 0px;*/
+	/*right: 0px;*/
 }
 
-#question02 {
-	position: relative;
-	right: 200px;	
+.survey-wrapper  { 
+    background-image: url('./assets/img/baby.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom; 
+    /*background-size: cover; */
+    /*max-height: 100%;*/
+    /*background-size: 500px;*/
+    /*height: 100%; */
+    /*width: 100%;*/
+    /*margin-bottom: 50px;*/
+    /*padding-top: 80px;*/
 }
 
-#question04 {
-	position: relative;
-	right: 150px;	
-}
+/*  @media (min-width: 2000px) { .survey-background {;} }
+  @media (max-width: 1000px) { .survey-background {background-size: 400px;} }
+  @media (max-width: 700px) { .survey-background {background-size: 300px;} }
+  @media (max-width: 600px) { .survey-background {background: none;} }
+
+*/
+
+/*
+      <div style={{
+        backgroundImage: 'url(https://s10.postimg.org/hvq64sq1l/search-background.jpg)',
+        width: "100%",
+        backgroundSize: 'cover',
+        marginBottom: 50,
+        paddingTop: 80
+      }}>*/
