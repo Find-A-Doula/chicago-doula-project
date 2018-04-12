@@ -38,7 +38,7 @@ class Home extends Component {
         <Row center="xs">
           <div>
 
-            <img className="logo" width="700px" padding="20px" src="/images/CDP_LOGO_MAIN.png" alt="logo" />
+            <img className="logo" src="/images/CDP_LOGO_MAIN.png" alt="logo" />
 
           </div>
         </Row>
@@ -59,7 +59,7 @@ class Home extends Component {
             <ButtonLearn />
           </Link>
           <Link to="/search">
-            <ButtonSignUp handleFormSubmit={this.handleButtonSignUp} />
+            <ButtonSignUp />
           </Link>
 
         </Row>

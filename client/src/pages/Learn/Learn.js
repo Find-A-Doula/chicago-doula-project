@@ -53,7 +53,7 @@ class Learn extends Component {
                 {info.sections.map(section => <WhyDoula section={section} key={section.key} />)}
               </div>
               <Row center="xs">
-                <button class="button">Find a Doula</button>
+                <button className="button">Find a Doula</button>
               </Row>
 
             </Col>

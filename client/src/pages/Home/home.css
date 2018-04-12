@@ -21,24 +21,13 @@
 	color: #2c3d50;
 }
 
-.landing-page h1,  {
-	padding: 20px 40px;
-	font-size: 50px;
-	margin: 0 auto;
-	text-align: center;
-	display: block;
-	letter-spacing: 1px;
-	padding-top: 180px;
-	margin-bottom: 20px;
-	width: 100px;
-}
-
-
 #CTAconfirmation {
 	text-align: center;
 	padding-top: 2px;
 }
 
 .logo {
-	margin-top: 100px;
+	margin-top: 10%;
+	width: 90%;
+	padding: 0 20px;
 }
