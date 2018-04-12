@@ -3,6 +3,7 @@ import { Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
 import ButtonLearn from '../../components/ButtonLearn';
 import ButtonSignUp from '../../components/ButtonSignUp';
+import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
 
@@ -30,18 +31,6 @@ class Home extends Component {
     });
   };
 
-  handleButtonLearn = event => {
-    event.preventDefault();
-
-    // Learn Button pressed, link to display
-  };
-
-  handleButtonSignUp = event => {
-    event.preventDefault();
-
-    // SignUp Button pressed, link to display
-  };
-
   render() {
     return (
       <div className="landing-page">
@@ -66,8 +55,12 @@ class Home extends Component {
         </Row>
         <Row center="xs">
 
-          <ButtonLearn handleFormSubmit={this.handleButtonLearn} />
-          <ButtonSignUp handleFormSubmit={this.handleButtonSignUp} />
+          <Link to="/learn">
+            <ButtonLearn />
+          </Link>
+          <Link to="/search">
+            <ButtonSignUp handleFormSubmit={this.handleButtonSignUp} />
+          </Link>
 
         </Row>
       </div>
