@@ -1,3 +1,17 @@
+
+.landing-page .logo,  {
+	padding: 20px 40px;
+	font-size: 10px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	margin-bottom: 40px;
+	width: 50px;
+}
+
 .landing-page {
 	width: 100%;
 	background-size: cover;
@@ -5,21 +19,16 @@
 	height: 100%;
 	top: 0;
 	background-color: #fff7e7;
-}
-
-.landing-page h1 {
-	padding: 20px 40px;
-	font-size: 50px;
-	margin: 0 auto;
-	text-align: center;
-	display: block;
-	letter-spacing: 1px;
-	padding-top: 180px;
-	margin-bottom: 20px;
-	width: 100px;
+	color: #2c3d50;
 }
 
 #CTAconfirmation {
 	text-align: center;
 	padding-top: 2px;
+}
+
+.logo {
+	margin-top: 10%;
+	width: 90%;
+	padding: 0 20px;
 }

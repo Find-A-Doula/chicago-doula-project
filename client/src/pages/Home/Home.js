@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
+import ButtonLearn from '../../components/ButtonLearn';
+import ButtonSignUp from '../../components/ButtonSignUp';
+import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
 
@@ -13,12 +17,9 @@ class Home extends Component {
     event.preventDefault();
 
     // Post email to ctaemails collection
-    axios
-      .post('/cta', { email: this.state.userEmail })
-      .then(this.setState({ showCTA: false }))
-      .catch(error => {
-        console.log(error.response);
-      });
+    axios.post('/cta', { email: this.state.userEmail }).then(this.setState({ showCTA: false })).catch(error => {
+      console.log(error.response);
+    });
   };
 
   handleInputChange = event => {
@@ -33,18 +34,35 @@ class Home extends Component {
   render() {
     return (
       <div className="landing-page">
-        <h1>Chicago Doula Project</h1>
-        {this.state.showCTA ? (
-          <CTAForm
-            userEmail={this.state.userEmail}
-            handleInputChange={this.handleInputChange}
-            handleFormSubmit={this.handleFormSubmit}
-          />
-        ) : (
-          <div id="CTAconfirmation">
-            <h3>Thank you! We will be in touch!</h3>
+
+        <Row center="xs">
+          <div>
+
+            <img className="logo" src="/images/CDP_LOGO_MAIN.png" alt="logo" />
+
           </div>
-        )}
+        </Row>
+        <Row center="xs" style={{ marginTop: '40px' }}>
+          {this.state.showCTA
+            ? <CTAForm
+                userEmail={this.state.userEmail}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+              />
+            : <div id="CTAconfirmation">
+                <h3>Thank you! We will be in touch!</h3>
+              </div>}
+        </Row>
+        <Row center="xs">
+
+          <Link to="/learn">
+            <ButtonLearn />
+          </Link>
+          <Link to="/comingsoon">
+            <ButtonSignUp />
+          </Link>
+
+        </Row>
       </div>
     );
   }
