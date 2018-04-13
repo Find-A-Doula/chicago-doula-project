@@ -1,8 +1,99 @@
 body{
 	overflow: 'auto';
 	background-color: #fff7e7;
-
+	font-family: 'Raleway', sans-serif;
 }
+
+.nav {
+  height: 50px;
+  width: 100%;
+  /*background-color: #4d4d4d;*/
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 35px;
+  /*color: #fff;*/
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #2c3d50;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #ffa592;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ffa592;
+    height: 10px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 60px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(16vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+
 
 
 .doula{
@@ -10,14 +101,19 @@ body{
 }
 
 .doula h1{
+	font-family: 'Cabin', sans-serif;
 	font-size: 55px;
     margin-bottom: 0px;
+      color: #2c3d50;
+
 }
 
 .doula h3{
+	font-family: 'Cabin', sans-serif;
 	font-size: 35px;
 	font-weight: bold;
     margin-bottom: 0px;
+      color: #2c3d50;
 
 }
 
@@ -26,18 +122,20 @@ body{
 	color: #b27366;
 }
 
+.doula-header{
+	margin: 0px 60px 20px 60px;
+}
+
+
+
 .doula-reasons{
 	text-align: left;
 	padding-bottom: 50px;
 }
 
 
-.doula-reasons img{
-	text-align: right;
-	float: right;
-}
 
-.button {
+.learn-button {
   color: #ffa592;
   background: #2c3d50;
   font-size: 46px;
@@ -46,13 +144,26 @@ body{
 }
 
 
-@media only screen and (max-width : 575px) {
+@media only screen and (max-width : 574px) {
 /* Styles */
+.doula-reasons{
+	text-align: center;
+}
 
 .doula-reasons img{
 	position: block;
     top: 0; bottom:0; left: 0; right:0;
     margin: auto;
+}
+
+}
+
+@media only screen and (min-width : 575px) {
+/* Styles */
+
+.doula-reasons img{
+	text-align: right;
+	float: right;
 }
 
 

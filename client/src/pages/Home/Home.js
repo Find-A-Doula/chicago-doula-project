@@ -58,7 +58,7 @@ class Home extends Component {
           <Link to="/learn">
             <ButtonLearn />
           </Link>
-          <Link to="/search">
+          <Link to="/comingsoon">
             <ButtonSignUp />
           </Link>
 
