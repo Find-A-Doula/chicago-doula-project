@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './user-survey.css';
 
-import Dropdown from 'react-toolbox/lib/dropdown';
+import Dropdown from 'react-toolbox/lib/dropdown/Dropdown';
+
 import background from '../../assets/img/baby.png';
-import Checkbox from 'react-toolbox/lib/checkbox';
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { BirthDoulaSurvey, PostpartumDoulaSurvey } from '../../components/Surveys';
