@@ -18,7 +18,7 @@ class Delivering extends Component {
         <Row center="xs">
           <div>
 
-            <img className="stork" width="1000px" padding="20px" src="/images/delivering.png" alt="stork" />
+            <img className="stork" width="1000px"  src="/images/delivering.png" alt="stork" />
 
           </div>
         </Row>

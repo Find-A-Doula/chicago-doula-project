@@ -5,3 +5,10 @@
   border-radius: 12px;
   
 }
+
+.stork{
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+  padding: "20px"
+}
