@@ -14,8 +14,8 @@ const CTAForm = props => (
                     onChange={props.handleInputChange}
                 />
             </div>
-            <div id="CTA-button-wrapper" className="button">
-                <input type="submit" value="Sign Up" id="CTA-button" onClick={props.handleFormSubmit} />
+            <div id="CTA-button-wrapper">
+                <input type="submit" value="Sign Up" id="CTA-button" className="button" onClick={props.handleFormSubmit} />
             </div>
         </form>
     </div>

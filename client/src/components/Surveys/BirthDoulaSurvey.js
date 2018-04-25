@@ -213,7 +213,7 @@ class BirthDoulaSurvey extends Component {
             <div className="submitSurvey">
               <Row center="xs" start="md">
                 <Col smOffset={1}>
-                  <Button className="searchSubmit" type="submit" raised>Submit</Button>
+                  <button className="button" type="submit" raised>Submit</button>
                 </Col>
               </Row>
             </div>

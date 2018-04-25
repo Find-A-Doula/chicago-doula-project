@@ -80,7 +80,7 @@ class Learn extends Component {
               </div>
               <Row center="xs">
                 <Link to="/comingsoon">
-                  <button className="learn-button">Find a Doula</button>
+                  <button className="button">Find a Doula</button>
                 </Link>
               </Row>
 
