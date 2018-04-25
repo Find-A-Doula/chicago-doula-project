@@ -1,10 +1,9 @@
 import React from 'react';
-import './ButtonLearn.css';
 
 const ButtonLearn = props => (
 	<div>
 		<form id="Learn-form">
-			<div id="Learn-button-wrapper">
+			<div id="Learn-button-wrapper" className="button">
 				<input type="submit" value="Learn More" id="Learn-button" onClick={props.handleButtonLearn} />
 			</div>
 		</form>

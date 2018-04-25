@@ -12,7 +12,7 @@ class Delivering extends Component {
         </Row>
         <Row center="xs">
           <Link to="/home">
-            <button className="soon-button">Home</button>
+            <button className="button">Home</button>
           </Link>
         </Row>
         <Row center="xs">
