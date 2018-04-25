@@ -36,6 +36,7 @@
 .button {
 	color: #000000;
 	border-radius: 10px;
+	margin: 10px 20px;
 	cursor: pointer;
 	height: 46px;
 	letter-spacing: 1px;
