@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-flexbox-grid';
 import './delivering.css';
+import StdBtn from '../../components/StdBtn'
 import { Link } from 'react-router-dom';
 
 class Delivering extends Component {
@@ -12,7 +13,7 @@ class Delivering extends Component {
         </Row>
         <Row center="xs">
           <Link to="/home">
-            <button className="button">Home</button>
+            <StdBtn value= "Home"/>
           </Link>
         </Row>
         <Row center="xs">

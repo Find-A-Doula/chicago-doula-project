@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
-import ButtonLearn from '../../components/ButtonLearn';
-import ButtonSignUp from '../../components/ButtonSignUp';
+import StdBtn from '../../components/StdBtn'
 import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
@@ -45,21 +44,21 @@ class Home extends Component {
         <Row center="xs" style={{ marginTop: '40px' }}>
           {this.state.showCTA
             ? <CTAForm
-                userEmail={this.state.userEmail}
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-              />
+              userEmail={this.state.userEmail}
+              handleInputChange={this.handleInputChange}
+              handleFormSubmit={this.handleFormSubmit}
+            />
             : <div id="CTAconfirmation">
-                <h3>Thank you! We will be in touch!</h3>
-              </div>}
+              <h3>Thank you! We will be in touch!</h3>
+            </div>}
         </Row>
         <Row center="xs">
 
           <Link to="/learn">
-            <ButtonLearn />
+            <StdBtn value="learn more" />
           </Link>
           <Link to="/comingsoon">
-            <ButtonSignUp />
+            <StdBtn value="Find a Doula" />
           </Link>
 
         </Row>
