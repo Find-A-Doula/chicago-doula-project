@@ -34,7 +34,7 @@
 }
 
 .button {
-	color: #000000;
+	color: #2c3d50;
 	border-radius: 10px;
 	margin: 10px 20px;
 	cursor: pointer;
@@ -42,9 +42,9 @@
 	letter-spacing: 1px;
 	padding: 10px 23px;
 	text-transform: uppercase;
-		font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	background: rgb(255, 165, 146) none repeat scroll 0% 0% / auto padding-box border-box;
 	border: 2px solid rgb(255, 165, 146);
-	font: normal normal 600 normal 16px / 20px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: normal normal 600 normal 16px / 20px 'Lilita One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-appearance: none;
   }

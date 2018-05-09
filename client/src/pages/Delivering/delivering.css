@@ -6,9 +6,23 @@
   
 } */
 
-.stork{
-  width: 1000px;
+.cookingHeader {
+	font-family: 'Lilita One', sans-serif;
+}
+
+.stork {
+  width: 100%;
   max-width: 100%;
   height: auto;
-  padding: "20px"
+  padding: 20px;
+}
+
+/* Media Queries 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width: 640px) {
+	.stork {
+    	width: 80%;
+  	}
 }

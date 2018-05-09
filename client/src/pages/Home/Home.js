@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
-import StdBtn from '../../components/StdBtn'
+import StdBtn from '../../components/StdBtn';
 import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
@@ -37,20 +37,20 @@ class Home extends Component {
         <Row center="xs">
           <div>
 
-            <img className="logo" src="/images/CDP_LOGO_MAIN.png" alt="logo" />
+            <img className="logo" src="/images/CDP_LOGO_MAIN_BLUE.png" alt="logo" />
 
           </div>
         </Row>
         <Row center="xs" style={{ marginTop: '40px' }}>
           {this.state.showCTA
             ? <CTAForm
-              userEmail={this.state.userEmail}
-              handleInputChange={this.handleInputChange}
-              handleFormSubmit={this.handleFormSubmit}
-            />
+                userEmail={this.state.userEmail}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+              />
             : <div id="CTAconfirmation">
-              <h3>Thank you! We will be in touch!</h3>
-            </div>}
+                <h3>Thank you! We will be in touch!</h3>
+              </div>}
         </Row>
         <Row center="xs">
 
