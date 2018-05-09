@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Checkbox from 'react-toolbox/lib/checkbox/Checkbox';
 import Input from 'react-toolbox/lib/input/Input';
-import Button from 'react-toolbox/lib/button/Button';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import StdBtn from '../../components/StdBtn'
 import './survey.css';
 
 class PostpartumDoulaSurvey extends Component {
@@ -165,7 +165,7 @@ class PostpartumDoulaSurvey extends Component {
             <div className="submitSurvey">
               <Row center="xs" start="sm">
                 <Col smOffset={1}>
-                  <Button className="searchSubmit" type="submit" raised>Submit</Button>
+                  <StdBtn value="Submit" />
                 </Col>
               </Row>
             </div>

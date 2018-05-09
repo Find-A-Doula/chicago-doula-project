@@ -1,7 +1,14 @@
-.soon-button {
+/* .soon-button {
   color: #ffa592;
   background: #2c3d50;
   font-size: 30px;
   border-radius: 12px;
   
+} */
+
+.stork{
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+  padding: "20px"
 }

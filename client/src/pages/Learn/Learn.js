@@ -3,6 +3,7 @@ import './learn.css';
 import { Row, Col } from 'react-flexbox-grid';
 import WhyDoula from '../../components/WhyDoula';
 import { Link } from 'react-router-dom';
+import StdBtn from '../../components/StdBtn'
 
 const info = {
   sections: [
@@ -80,7 +81,7 @@ class Learn extends Component {
               </div>
               <Row center="xs">
                 <Link to="/comingsoon">
-                  <button className="learn-button">Find a Doula</button>
+                  <StdBtn value="Find a Doula"/>
                 </Link>
               </Row>
 
