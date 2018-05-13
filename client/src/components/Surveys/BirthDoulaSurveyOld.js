@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import Checkbox from 'react-toolbox/lib/checkbox/Checkbox';
 import Input from 'react-toolbox/lib/input/Input';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import StdBtn from '../../components/StdBtn';
+import StdBtn from '../../components/StdBtn'
 import './survey.css';
-import woman01 from '../../assets/img/woman01.png';
-import woman02 from '../../assets/img/woman02.png';
-import woman05 from '../../assets/img/woman05.png';
 
 class BirthDoulaSurvey extends Component {
   state = {
@@ -58,7 +55,7 @@ class BirthDoulaSurvey extends Component {
           <form>
             <div id="question02" className="questionWrapper">
               <Row start="xs">
-                <Col mdOffset={3} md={5} sm={7}>
+                <Col mdOffset={1} md={8} sm={7}>
                   <h3 className="questionTitle">About Your Pregnancy:</h3>
 
                   <Row start="xs">
@@ -91,17 +88,11 @@ class BirthDoulaSurvey extends Component {
                     </Col>
                   </Row>
                 </Col>
-                <Col md={1}>
-                  <img src={woman01} className="woman01" alt="Woman" />
-                </Col>
               </Row>
             </div>
 
             <div id="question03" className="questionWrapper">
               <Row start="xs">
-                <Col mdOffset={1} md={1}>
-                  <img src={woman02} className="woman02" alt="Woman" />
-                </Col>
                 <Col mdOffset={1} md={8} sm={7}>
                   <h3 className="questionTitle">I'd like my doula with skills in: (Check all that apply)</h3>
 
@@ -199,12 +190,12 @@ class BirthDoulaSurvey extends Component {
 
             <div id="question04" className="questionWrapper">
               <Row start="xs">
-                <Col mdOffset={3} md={4} sm={7}>
+                <Col mdOffset={1}>
                   <h3 className="questionTitle">
                     Please Enter Your Zip Code:
                   </h3>
-                  <Row start="xs" className="zipcodeWrapper">
-                    <Col>
+                  <Row center="xs" start="sm" className="zipcodeWrapper">
+                    <Col smOffset={1} xs={7}>
                       <Input
                         type="text"
                         label="Your Zip Code"
@@ -216,20 +207,16 @@ class BirthDoulaSurvey extends Component {
                     </Col>
                   </Row>
                 </Col>
-                <Col mdOffset={1} md={1}>
-                  <img src={woman05} className="woman05" alt="Woman" />
-                </Col>
               </Row>
             </div>
 
             <div className="submitSurvey">
-              <Row center="lg">
-                <Col>
-                  <StdBtn value="Submit" />
+              <Row center="xs" start="md">
+                <Col smOffset={1}>
+                  <StdBtn value= "Submit"/>
                 </Col>
               </Row>
             </div>
-
           </form>
         </div>
       </Grid>
