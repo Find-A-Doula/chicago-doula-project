@@ -102,7 +102,7 @@ class BirthDoulaSurvey extends Component {
                 <Col mdOffset={1} md={1}>
                   <img src={woman02} className="woman02" alt="Woman" />
                 </Col>
-                <Col mdOffset={1} md={8} sm={7}>
+                <Col mdOffset={1} md={8} sm={7} style={{ marginLeft: '80px' }}>
                   <h3 className="questionTitle">I'd like my doula with skills in: (Check all that apply)</h3>
 
                   <Row start="xs">
