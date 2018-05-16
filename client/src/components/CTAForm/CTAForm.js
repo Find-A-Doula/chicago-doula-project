@@ -1,4 +1,5 @@
 import React from 'react';
+import StdBtn from '../../components/StdBtn'
 import './CTAForm.css';
 
 const CTAForm = props => (
@@ -15,7 +16,7 @@ const CTAForm = props => (
                 />
             </div>
             <div id="CTA-button-wrapper">
-                <input type="submit" value="Sign Up" id="CTA-button" onClick={props.handleFormSubmit} />
+            <StdBtn  value="Sign Up" id="CTA-button"  handle={props.handleFormSubmit}/>
             </div>
         </form>
     </div>

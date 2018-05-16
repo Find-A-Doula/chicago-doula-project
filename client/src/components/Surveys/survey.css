@@ -8,11 +8,17 @@
 	font-size: 1.4em;
 }
 
-.searchSubmit {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	background-color: var(--lowlight) !important;
-	font-family: 'Raleway', sans-serif !important;
-	font-weight: bold !important;
+.woman01, .woman02, .woman05 {
+	max-height: 200px;
+	/*padding-left: 100px;*/
+	padding-top: 30px;
 }
 
+.submitSurvey {
+	padding-bottom: 40px;
+	margin-top: -50px
+}
+
+.zipcodeWrapper {
+	padding-left: 40px;
+}

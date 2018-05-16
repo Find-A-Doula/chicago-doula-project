@@ -3,6 +3,8 @@ import './user-survey.css';
 
 import Dropdown from 'react-toolbox/lib/dropdown/Dropdown';
 
+import background from '../../assets/img/baby.png';
+
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { BirthDoulaSurvey, PostpartumDoulaSurvey } from '../../components/Surveys';
 
@@ -28,6 +30,7 @@ class UserSurvey extends Component {
   render() {
     return (
       <div>
+        <img src={background} className="search-background" alt="Background" />
         <Grid fluid>
           <div id="question01">
             <Row center="xs">

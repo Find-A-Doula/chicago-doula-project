@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-flexbox-grid';
 import CTAForm from '../../components/CTAForm';
-import ButtonLearn from '../../components/ButtonLearn';
-import ButtonSignUp from '../../components/ButtonSignUp';
+import StdBtn from '../../components/StdBtn';
 import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
@@ -38,7 +37,7 @@ class Home extends Component {
         <Row center="xs">
           <div>
 
-            <img className="logo" src="/images/CDP_LOGO_MAIN.png" alt="logo" />
+            <img className="logo" src="/images/CDP_LOGO_MAIN_BLUE.png" alt="logo" />
 
           </div>
         </Row>
@@ -56,10 +55,10 @@ class Home extends Component {
         <Row center="xs">
 
           <Link to="/learn">
-            <ButtonLearn />
+            <StdBtn value="learn more" />
           </Link>
           <Link to="/comingsoon">
-            <ButtonSignUp />
+            <StdBtn value="Find a Doula" />
           </Link>
 
         </Row>

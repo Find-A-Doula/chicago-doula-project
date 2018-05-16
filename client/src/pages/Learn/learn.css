@@ -1,7 +1,7 @@
 body{
 	overflow: 'auto';
-	background-color: #fff7e7;
-	font-family: 'Raleway', sans-serif;
+	background-color: var(--main-bg-color);
+	font-family: var(--main-font-family);
 }
 
 .nav {
@@ -101,7 +101,7 @@ body{
 }
 
 .doula h1{
-	font-family: 'Cabin', sans-serif;
+	font-family: var(--sub-font);
 	font-size: 55px;
     margin-bottom: 0px;
       color: #2c3d50;
@@ -109,7 +109,7 @@ body{
 }
 
 .doula h3{
-	font-family: 'Cabin', sans-serif;
+	font-family: var(--sub-font);
 	font-size: 35px;
 	font-weight: bold;
     margin-bottom: 0px;
@@ -122,10 +122,13 @@ body{
 	color: #b27366;
 }
 
-.doula-header{
-	margin: 0px 60px 20px 60px;
+.doula-header, .doula-intro{
+	margin: 0px 20% 20px 20%;
 }
 
+.doula-intro p{
+	font-size: 35px;
+}
 
 
 .doula-reasons{
@@ -133,15 +136,11 @@ body{
 	padding-bottom: 50px;
 }
 
-
-
-.learn-button {
-  color: #ffa592;
-  background: #2c3d50;
-  font-size: 46px;
-  border-radius: 12px;
-  
+.doula-desc{
+	padding: 0px 20% 0px 10%;
 }
+
+
 
 
 @media only screen and (max-width : 574px) {
@@ -155,6 +154,14 @@ body{
     top: 0; bottom:0; left: 0; right:0;
     margin: auto;
 }
+.doula-header{
+	margin: 0px 10% 20px 10%;
+}
+
+.doula-desc{
+	padding: 0px 5%;
+}
+
 
 }
 
