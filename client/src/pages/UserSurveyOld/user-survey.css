@@ -1,0 +1,65 @@
+:root {
+  --main-bg-color: #fff7e7;
+  --main-text-color: #2c3d50;
+  --highlight: #f2ece3;
+  --lowlight: #ffa592;
+}
+
+
+body {
+	background-color: var(--main-bg-color);
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, p, a, span {
+	color: var(--main-text-color) !important; 
+	/* need to change React Toolbox styles */
+}
+
+img.search-background {
+  /* Set rules to fill background */
+  min-height: 80%;
+  min-width: 50px;
+
+  /* Set up proportionate scaling */
+  width: auto;
+  height: 100%;
+  
+  /* Set up positioning */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  z-index: -99999;
+}
+
+/* Dropdown menu value */
+#question01 > div > div > div > div > input {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	padding-top: 0px;
+}
+
+@media screen and (max-width: 800px) { 
+  img.search-background {
+    right: 50%;
+    margin-right: -400px;
+  }
+}
+
+@media screen and (max-width: 575px) { 
+  /* Dropdown menu */
+  #question01 > div > div > div > div {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  img.search-background {
+    display: none;
+  }
+}
+
+

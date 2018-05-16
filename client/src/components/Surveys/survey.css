@@ -8,5 +8,17 @@
 	font-size: 1.4em;
 }
 
+.woman01, .woman02, .woman05 {
+	max-height: 200px;
+	/*padding-left: 100px;*/
+	padding-top: 30px;
+}
 
+.submitSurvey {
+	padding-bottom: 40px;
+	margin-top: -50px
+}
 
+.zipcodeWrapper {
+	padding-left: 40px;
+}
