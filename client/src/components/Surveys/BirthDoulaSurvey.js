@@ -224,7 +224,7 @@ class BirthDoulaSurvey extends Component {
 
             <div className="submitSurvey">
               <Row center="lg">
-                <Col>
+                <Col smOffset={1}>
                   <StdBtn value="Submit" />
                 </Col>
               </Row>
