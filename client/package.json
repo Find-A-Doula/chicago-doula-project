@@ -4,6 +4,8 @@
   "private": true,
   "proxy": "http://localhost:5000/",
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
+    "@material-ui/icons": "^1.0.0",
     "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -21,7 +23,15 @@
     "toolbox": "react-toolbox-themr"
   },
   "reactToolbox": {
-    "include": ["BUTTON", "DATE_PICKER", "CHECKBOX", "INPUT", "SLIDER", "CARD", "DROPDOWN"],
+    "include": [
+      "BUTTON",
+      "DATE_PICKER",
+      "CHECKBOX",
+      "INPUT",
+      "SLIDER",
+      "CARD",
+      "DROPDOWN"
+    ],
     "customProperties": {
       "animation-duration": "0.3s",
       "color-accent": "var(--palette-pink-a200)",
