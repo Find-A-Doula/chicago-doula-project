@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import UserSurvey from './pages/UserSurvey';
+import SearchResults from './pages/SearchResults';
 import Learn from './pages/Learn';
 import ComingSoon from './pages/Delivering';
 import MaterialUI from './pages/MaterialUI';
@@ -17,6 +18,7 @@ const App = () => (
             <Router>
                 <Switch>
                     <Route path="/search" component={UserSurvey} />
+                    <Route path="/results" component={SearchResults} />
                     <Route path="/learn" component={Learn} />
                     <Route path="/comingsoon" component={ComingSoon} />
                     <Route path="/materialui" component={MaterialUI} />
