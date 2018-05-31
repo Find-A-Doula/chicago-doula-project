@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './user-survey.css';
-
+import NavBar from '../../components/NavBar';
 import Dropdown from 'react-toolbox/lib/dropdown/Dropdown';
-
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { BirthDoulaSurvey, PostpartumDoulaSurvey } from '../../components/Surveys';
 
@@ -28,6 +27,7 @@ class UserSurvey extends Component {
   render() {
     return (
       <div>
+      <NavBar />
         <Grid fluid>
           <div id="question01">
             <Row center="xs">
