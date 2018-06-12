@@ -1,0 +1,18 @@
+	.bigScreenNav {
+    	display:block;
+    }
+    .smallScreenNav {
+    	display:none;
+    }
+/*    .navBar{
+        backgroundColor: var(--main-text-color);
+    }*/
+
+@media all and (max-width: 600px) {
+	.bigScreenNav {
+    	display:none;
+    }
+    .smallScreenNav {
+    	display:block;
+    }
+}

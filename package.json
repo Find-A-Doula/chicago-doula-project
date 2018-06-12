@@ -22,7 +22,6 @@
 		"react-flexbox-grid": "^2.0.0",
 		"react-flexboxgrid": "^1.0.1",
 		"typed.js": "^2.0.6",
-
 		"validator": "^9.4.1"
 	},
 	"devDependencies": {
