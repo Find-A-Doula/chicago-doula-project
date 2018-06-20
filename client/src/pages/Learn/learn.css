@@ -1,4 +1,5 @@
 body {
+	overflow: 'auto';
 	background-color: var(--main-bg-color);
 	font-family: var(--main-font-family);
 }
