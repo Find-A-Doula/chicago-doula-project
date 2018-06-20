@@ -34,7 +34,7 @@ body {
 }
 
 .doula-intro p {
-	font-size: 35px;
+	font-size: 30px;
 }
 
 .doula-reasons {
@@ -48,6 +48,10 @@ body {
 
 @media only screen and (max-width: 574px) {
 	/* Styles */
+
+	.doula-intro p {
+		font-size: 20px;
+	}
 	.doula-reasons {
 		text-align: center;
 	}
