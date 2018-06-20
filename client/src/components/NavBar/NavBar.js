@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -25,25 +25,32 @@ const styles = {
   }
 };
 
-function ButtonAppBar(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" className={classes.navBar}>
-        <Toolbar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-           <Link to="/home">
-            <img href="/" src="/images/CDP_LOGO_BLUE.png" alt="logo" height="50" width="100" />
-            </Link>
-          </Typography>
+class ButtonAppBar extends Component {
+  render() {
+    return (
+      <div className={this.props.classes.root}>
+        <AppBar position="static" className={this.props.classes.navBar}>
+          <Toolbar>
+            <Typography variant="title" color="inherit" className={this.props.classes.flex}>
+              <Link to="/home">
+                <img href="/" src="/images/CDP_LOGO_BLUE.png" alt="logo" height="50" width="100" />
+              </Link>
+            </Typography>
 
-          <Button href="/learn" color="inherit">What is a Doula</Button>
-          <Button href="/search" color="inherit">Search</Button>
-          <Button href="/comingsoon" color="inherit">Register</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+            <Button href="/learn" color="inherit">
+              What is a Doula
+            </Button>
+            <Button href="/search" color="inherit">
+              Search
+            </Button>
+            <Button href="/comingsoon" color="inherit">
+              Register
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
 
 ButtonAppBar.propTypes = {
