@@ -25,6 +25,9 @@ const styles = {
     marginLeft: -12,
     marginRight: 20
   },
+  menuItem:{
+    textDecoration: 'none'
+  },
   bigScreenNav: {
     display: 'block',
     '@media screen and (max-width: 601px)': {
@@ -96,9 +99,9 @@ class ButtonAppBar extends Component {
                 open={Boolean(anchorEl)}
                 onClose={this.handleClose}
               >
-                <MenuItem onClick={this.handleClose}><a href="/learn" color="inherit"> What is a Doula</a></MenuItem>
-                <MenuItem onClick={this.handleClose}><a href="/search" color="inherit">Search </a></MenuItem>
-                <MenuItem onClick={this.handleClose}><a href="/comingsoon" color="inherit">Register </a></MenuItem>
+                <MenuItem onClick={this.handleClose}><a href="/learn" className = {classes.menuItem} color="inherit"> What is a Doula</a></MenuItem>
+                <MenuItem onClick={this.handleClose}><a href="/search" className = {classes.menuItem} color="inherit">Search </a></MenuItem>
+                <MenuItem onClick={this.handleClose}><a href="/comingsoon" className = {classes.menuItem} color="inherit">Register </a></MenuItem>
               </Menu>
             </div>
 
