@@ -9,6 +9,9 @@ import Typography from '@material-ui/core/Typography';
 
 import { createMuiTheme } from '@material-ui/core/styles';
 import cyan from '@material-ui/core/colors/cyan';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import Button from '@material-ui/core/Button'
 
 // Component
 const styles = theme => ({
@@ -25,8 +28,10 @@ const styles = theme => ({
     marginLeft: 300
   },
   name: {
-    marginBottom: 12,
-    fontSize: 24
+    // marginBottom: 10,
+    fontSize: 28,
+    fontWeight: 'bolder',
+    letterSpacing: '1px'
   },
   bulletSection: {
     // display: 'inline-block',
@@ -35,9 +40,10 @@ const styles = theme => ({
     columnCount: 2
   }, 
   image: {
-    margin: '6px',
-    padding: '20px',
-    boxShadow: '1px 1px 1px 1px #000',
+    // margin: '6px',
+    // padding: '20px',
+    // boxShadow: '1px 1px 1px 1px #000',
+    borderRadius: '10px'
   },
   hr: {
     borderTop: "1px dashed #000"
@@ -56,6 +62,17 @@ const styles = theme => ({
     fontWeight: "bolder",
     display: "inline-block",
     padding: '10px 0'   
+  },
+  star: {
+    color: '#f8b64c'
+  },
+  button: {
+    // display: "relative",
+    marginTop: '200px',
+    marginLeft: '-195px',
+    width: '180px',
+    textTransform: 'none',
+    backgroundColor: '#ffa692'
   }
 });
 
@@ -76,8 +93,20 @@ class ResultCard extends React.Component {
                 <Grid item>
                     <img className={classes.image} src={doula.image}/>
                 </Grid>
+                <Grid item>
+                    <Button variant="contained" className={classes.button}>
+                        Message
+                    </Button>
+                </Grid>
                 <Grid item xs>
-                    <Typography className={classes.name} color="cyan">{doula.name}</Typography>
+                    <Typography className={classes.name}>{doula.name}</Typography>
+                    <Typography>
+                      <FontAwesomeIcon className={classes.star} icon={faStar} />
+                      <FontAwesomeIcon className={classes.star} icon={faStar} />
+                      <FontAwesomeIcon className={classes.star} icon={faStar} />
+                      <FontAwesomeIcon className={classes.star} icon={faStar} />
+                      <FontAwesomeIcon className={classes.star} icon={faStar} />
+                    </Typography>
                     <hr className={classes.hr}/>
                     <Typography className={classes.subheadline}>Age: {doula.age}</Typography>
                     <Typography className={classes.subheadline}>{doula.location}</Typography>
