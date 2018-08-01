@@ -57,6 +57,9 @@ class ButtonAppBar extends Component {
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
 
   render() {
     const { anchorEl } = this.state;
