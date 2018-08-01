@@ -24,8 +24,23 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20
+  },
+  bigScreenNav: {
+    display: 'block',
+    '@media screen and (max-width: 601px)': {
+      display: 'none',
+    }
+  },
+  smallScreenNav: {
+    display: 'none',
+    textDecoration: 'none',
+    '@media screen and (max-width: 600px)': {
+      display: 'block',
+    }
   }
 };
+
+ // max - width less than or equal to
 
 class ButtonAppBar extends Component {
   state = {
@@ -46,6 +61,7 @@ class ButtonAppBar extends Component {
 
     return (
       <div className={classes.root}>
+        
         <AppBar position="static" className={classes.navBar}>
           <Toolbar>
             <Typography variant="title" color="inherit" className={classes.flex}>
@@ -54,35 +70,37 @@ class ButtonAppBar extends Component {
               </Link>
             </Typography>
 
-            <Button href="/learn" color="inherit">
-              What is a Doula
-            </Button>
-            <Button href="/search" color="inherit">
-              Search
-            </Button>
-            <Button href="/comingsoon" color="inherit">
-              Register
-            </Button>
+            <div className = {classes.bigScreenNav}>
+              <Button href="/learn" color="inherit">
+                What is a Doula
+              </Button>
+              <Button href="/search" color="inherit">
+                Search
+              </Button>
+              <Button href="/comingsoon" color="inherit">
+                Register
+              </Button>
+            </div>
 
-                      <div>
-        <IconButton style={styles.menuButton} 
-          aria-owns={anchorEl ? 'simple-menu' : null}
-          aria-haspopup="true"
-          onClick={this.handleClick}
-        >
-        <MenuIcon />
-        </IconButton>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={this.handleClose}
-        >
-          <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose}>My account</MenuItem>
-          <MenuItem onClick={this.handleClose}>Logout</MenuItem>
-        </Menu>
-      </div>
+            <div className = {classes.smallScreenNav} >
+              <IconButton style={styles.menuButton} 
+                aria-owns={anchorEl ? 'simple-menu' : null}
+                aria-haspopup="true"
+                onClick={this.handleClick}
+              >
+              <MenuIcon />
+              </IconButton>
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={this.handleClose}
+              >
+                <MenuItem onClick={this.handleClose}><a href="/learn" color="inherit"> What is a Doula</a></MenuItem>
+                <MenuItem onClick={this.handleClose}><a href="/search" color="inherit">Search </a></MenuItem>
+                <MenuItem onClick={this.handleClose}><a href="/comingsoon" color="inherit">Register </a></MenuItem>
+              </Menu>
+            </div>
 
       
           </Toolbar>
