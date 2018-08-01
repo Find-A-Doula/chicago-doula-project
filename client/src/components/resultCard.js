@@ -31,7 +31,7 @@ const styles = theme => ({
   bulletSection: {
     // display: 'inline-block',
     // float: 'left',
-    margin: '0 2px',
+    margin: '2px 2px',
     columnCount: 2
   }, 
   image: {
@@ -51,6 +51,11 @@ const styles = theme => ({
   more: {
     paddingLeft: '20px',
     textDecoration: 'none'
+  },
+  lastSignIn: {
+    fontWeight: "bolder",
+    display: "inline-block",
+    padding: '10px 0'   
   }
 });
 
@@ -84,10 +89,10 @@ class ResultCard extends React.Component {
                     ) :
                         <Typography className={classes.bio}>{doula.bio}</Typography>
                     }
-                    <Typography className={classes.subheadline}>Last signed in: {doula.lastSignIn}</Typography>
+                    <Typography className={classes.lastSignIn}>Last signed in: {doula.lastSignIn}</Typography>
                     <div className={classes.bulletSection}>
                     {doula.experience.map(experience => (
-                        <Typography className={classes.bullet}>{experience}</Typography>
+                        <Typography className={classes.bullet}>• {experience}</Typography>
                     ))}
                     </div>
                 </Grid>
