@@ -4,10 +4,16 @@
   "private": true,
   "proxy": "http://localhost:5000/",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "^0.1.0-11",
+    "@material-ui/core": "^1.0.0",
+    "@material-ui/icons": "^1.0.0",
     "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-flexbox-grid": "^2.0.0",
+    "react-jss": "^8.6.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-toolbox": "^2.0.0-beta.12",
@@ -21,7 +27,15 @@
     "toolbox": "react-toolbox-themr"
   },
   "reactToolbox": {
-    "include": ["BUTTON", "DATE_PICKER", "CHECKBOX", "INPUT", "SLIDER", "CARD", "DROPDOWN"],
+    "include": [
+      "BUTTON",
+      "DATE_PICKER",
+      "CHECKBOX",
+      "INPUT",
+      "SLIDER",
+      "CARD",
+      "DROPDOWN"
+    ],
     "customProperties": {
       "animation-duration": "0.3s",
       "color-accent": "var(--palette-pink-a200)",

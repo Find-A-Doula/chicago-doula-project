@@ -1,5 +1,4 @@
-
-.landing-page .logo,  {
+.landing-page.logo {
 	padding: 20px 40px;
 	font-size: 10px;
 	height: 100px;
@@ -18,7 +17,7 @@
 	position: fixed;
 	height: 100%;
 	top: 0;
-	background-color: #fff7e7;
+	background-color: var(--main-bg-color);
 	color: #2c3d50;
 }
 
@@ -47,4 +46,4 @@
 	border: 2px solid rgb(255, 165, 146);
 	font: normal normal 600 normal 16px / 20px 'Lilita One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	-webkit-appearance: none;
-  }
+}

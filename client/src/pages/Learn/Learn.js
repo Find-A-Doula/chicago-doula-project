@@ -4,6 +4,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import WhyDoula from '../../components/WhyDoula';
 import { Link } from 'react-router-dom';
 import StdBtn from '../../components/StdBtn';
+import NavBar from '../../components/NavBar';
 
 const info = {
   sections: [
@@ -38,29 +39,7 @@ class Learn extends Component {
   render() {
     return (
       <div className="learn-page">
-
-        <div className="nav">
-          <div className="nav-header">
-            <div className="nav-title">
-              <Link to="/home">
-                <img src="/images/CDP_LOGO_BIG-01.png" alt="logo" height="50" width="100" />
-              </Link>
-
-            </div>
-          </div>
-          <div className="nav-btn">
-            <label for="nav-check">
-              <span />
-              <span />
-              <span />
-            </label>
-          </div>
-          <input type="checkbox" id="nav-check" />
-          <div className="nav-links">
-            <Link to="/home">Home</Link>
-            <Link to="/comingsoon">Find Doula</Link>
-          </div>
-        </div>
+      <NavBar />
 
         <div className="learn-page">
           <div className="doula">
