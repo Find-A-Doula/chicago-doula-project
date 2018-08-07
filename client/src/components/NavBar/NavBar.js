@@ -80,7 +80,7 @@ class ButtonAppBar extends Component {
               <Button href="/learn" color="inherit">
                 What is a Doula
               </Button>
-              <Button href="/search" color="inherit">
+              <Button href="/comingsoon" color="inherit">
                 Search
               </Button>
               <Button href="/comingsoon" color="inherit">
