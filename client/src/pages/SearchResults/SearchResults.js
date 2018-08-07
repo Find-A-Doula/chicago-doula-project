@@ -2,11 +2,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid } from 'react-flexbox-grid';
 
 // Local
 import './search-results.css';
-import ResultCard from "../../components/resultCard.js"
+import ResultCard from "../../components/SearchResults/resultCard.js"
 
 // Component
 const styles = theme => ({
@@ -66,10 +66,11 @@ class SearchResults extends Component {
   render() {
     return (
       <div>
-        {this.state.doulas.map(doula => (
-          <ResultCard doula={doula}/>
-        ))}
-
+        <Grid container>
+          {this.state.doulas.map(doula => (
+            <ResultCard doula={doula}/>
+          ))}
+        </Grid>
       </div>
     );
   }
