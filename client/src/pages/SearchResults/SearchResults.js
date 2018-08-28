@@ -7,11 +7,15 @@ import Grid from '@material-ui/core/Grid';
 // Local
 import ResultCard from "../../components/SearchResults/resultCard.js"
 import SideBarCard from "../../components/SearchResults/sideBarCard.js"
+import NavBar from '../../components/NavBar'
 
 // Component
 const styles = theme => ({
   root: {
     flexGrow: 1
+  },
+  pageWrapper: {
+    marginTop: '20px'
   }
 });
 
@@ -62,7 +66,8 @@ class SearchResults extends Component {
 
     return (
       <div className={classes.root}>
-        <Grid container spacing={8}>
+       <NavBar className={classes.navBar} currentPage="/results"/>
+        <Grid container spacing={8} className={classes.pageWrapper}>
           <Grid item xs={12} sm={5}>
             <SideBarCard/>
           </Grid>

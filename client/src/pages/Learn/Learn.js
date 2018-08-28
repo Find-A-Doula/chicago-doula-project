@@ -39,7 +39,7 @@ class Learn extends Component {
   render() {
     return (
       <div className="learn-page">
-      <NavBar />
+      <NavBar currentPage="/learn"/>
 
         <div className="learn-page">
           <div className="doula">

@@ -27,7 +27,7 @@ class UserSurvey extends Component {
   render() {
     return (
       <div>
-      <NavBar />
+      <NavBar currentPage="/search"/>
         <Grid fluid>
           <div id="question01">
             <Row center="xs">
