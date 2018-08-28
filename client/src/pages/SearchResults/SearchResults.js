@@ -2,27 +2,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid } from 'react-flexbox-grid';
+import Grid from '@material-ui/core/Grid';
 
 // Local
-import './search-results.css';
 import ResultCard from "../../components/SearchResults/resultCard.js"
+import SideBarCard from "../../components/SearchResults/sideBarCard.js"
+import NavBar from '../../components/NavBar'
 
 // Component
 const styles = theme => ({
   root: {
-    overflow: 'hidden',
-    padding: `0 ${theme.spacing.unit * 3}px`,
+    flexGrow: 1
   },
-  wrapper: {
-    maxWidth: 400,
-  },
-  paper: {
-    margin: theme.spacing.unit,
-    padding: theme.spacing.unit * 2,
-  },
+  pageWrapper: {
+    marginTop: '20px'
+  }
 });
 
+// MOVE TO API
 class SearchResults extends Component {
   state = {
     doulas: [
@@ -64,12 +61,21 @@ class SearchResults extends Component {
   }
 
   render() {
+
+    const { classes } = this.props
+
     return (
-      <div>
-        <Grid container>
-          {this.state.doulas.map(doula => (
-            <ResultCard doula={doula}/>
-          ))}
+      <div className={classes.root}>
+       <NavBar className={classes.navBar} currentPage="/results"/>
+        <Grid container spacing={8} className={classes.pageWrapper}>
+          <Grid item xs={12} sm={5}>
+            <SideBarCard/>
+          </Grid>
+          <Grid item xs={12} sm={7}>
+            {this.state.doulas.map(doula => (
+              <ResultCard doula={doula}/>
+            ))}
+          </Grid>
         </Grid>
       </div>
     );

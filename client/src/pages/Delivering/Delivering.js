@@ -9,7 +9,7 @@ class Delivering extends Component {
   render() {
     return (
       <div className="delivering-page">
-        <NavBar />
+        <NavBar currentPage="/comingsoon"/>
         <Row center="xs">
           <h1 className="cookingHeader"> Still cooking in the oven. </h1>
         </Row>
