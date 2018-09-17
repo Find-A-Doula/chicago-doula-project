@@ -13,15 +13,17 @@ import Button from '@material-ui/core/Button';
 // Component
 const styles = theme => ({
   root: {
-    overflow: 'hidden',
+    // overflow: 'hidden',
+    overflow: 'visible',
     padding: `0 ${theme.spacing.unit * 3}px`
   },
   wrapper: {
-    maxWidth: 1000
+    maxWidth: 1000,
   },
   paper: {
-    margin: theme.spacing.unit,
-    padding: theme.spacing.unit * 2
+    margin: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 2,
+    boxShadow: "6px 6px 47px 3px rgba(200,195,200,1)",
     // marginLeft: 300
   },
   name: {

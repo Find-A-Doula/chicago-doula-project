@@ -8,14 +8,25 @@ import Grid from '@material-ui/core/Grid';
 import ResultCard from "../../components/SearchResults/resultCard.js"
 import SideBarCard from "../../components/SearchResults/sideBarCard.js"
 import NavBar from '../../components/NavBar'
+import FilterDropdown from '../../components/SearchResults/filterDropdown.js'
 
 // Component
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   pageWrapper: {
-    marginTop: '20px'
+    marginTop: '20px',
+  },
+  sideBarHeaderText: {
+    textAlign: 'center',
+    margin: 0
+  },
+  resultsAmount: {
+
+  },
+  resultsAmountSpan: {
+    color: '#ffa692 !important',
   }
 });
 
@@ -68,13 +79,26 @@ class SearchResults extends Component {
       <div className={classes.root}>
        <NavBar className={classes.navBar} currentPage="/results"/>
         <Grid container spacing={8} className={classes.pageWrapper}>
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} md={5}>
+            <div><h2 className={classes.sideBarHeaderText}>Refine Results</h2></div>
             <SideBarCard/>
           </Grid>
-          <Grid item xs={12} sm={7}>
-            {this.state.doulas.map(doula => (
-              <ResultCard doula={doula}/>
-            ))}
+          <Grid item xs={12} md={7}>
+            <Grid container>
+              <Grid item xs={6}>
+                <FilterDropdown />
+              </Grid>
+              <Grid item xs={6}>
+                <p className={classes.resultsAmount}>
+                  <span className={classes.resultsAmountSpan}>57</span> Doulas Found
+                </p>
+              </Grid>
+              <Grid item xs={12}>
+                {this.state.doulas.map(doula => (
+                  <ResultCard doula={doula}/>
+                ))}
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </div>
