@@ -10,6 +10,7 @@ import SearchResults from './pages/SearchResults';
 import Learn from './pages/Learn';
 import ComingSoon from './pages/Delivering';
 import MaterialUI from './pages/MaterialUI';
+import Register from './pages/Register';
 import './App.css';
 import theme from './theme';
 
@@ -25,6 +26,7 @@ const App = () => (
                     <Route path="/learn" component={Learn} />
                     <Route path="/comingsoon" component={ComingSoon} />
                     <Route path="/materialui" component={MaterialUI} />
+                    <Route path="/register" component={Register} />
                     <Route path="/" component={Home} />
                 </Switch>
             </Router>
