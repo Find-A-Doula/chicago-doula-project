@@ -48,14 +48,6 @@ class SideBarCard extends React.Component {
                 sliderStartLabel="$"
                 onChange={this.handleChange}
               />
-              <StepSlider
-                title="Preferred Experience"
-                sliderMin={0}
-                sliderMax={20}
-                sliderStep={5}
-                sliderEndLabel=" years"
-                onChange={this.handleChange}
-              />
             </Grid>
             <Grid item xs={12}>
               <SideBarList title="Focus Area" onChange={this.handleChange} />
