@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Button from '@material-ui/core/Button';
+import Popover from './popOver.js'
+import doulaFullProfile from './doulaFullProfile.js';
 
 // Component
 const styles = theme => ({
@@ -55,7 +57,9 @@ const styles = theme => ({
 	more: {
 		paddingLeft: '20px',
 		textDecoration: 'none',
-		color: "#ffa692 !important"
+		color: "#ffa692 !important",
+		display: "inline-block",
+		marginTop: 0
 	},
 	lastSignIn: {
 		fontWeight: 'bolder',
@@ -77,7 +81,21 @@ const styles = theme => ({
 const MAX_LENGTH = 250;
 
 class ResultCard extends React.Component {
+	state = {
+		open: false,
+		selectedValue: this.props.doula.id
+	  };
 
+	handleClickOpen = () => {
+		this.setState({
+			open: true,
+		});
+	};
+
+	handleClose = value => {
+		this.setState({ selectedValue: value, open: false });
+	};
+	
 	render() {
 		const { classes, doula } = this.props;
 		const trimmedBio = doula.bio.substr(0, MAX_LENGTH)
@@ -112,9 +130,17 @@ class ResultCard extends React.Component {
 								<hr className={classes.hr} />
 								{doula.bio.length > MAX_LENGTH
 									? <Typography className={classes.bio}>
-											{`${bio}...`}<a className={classes.more} href="#">More</a>
+											{`${bio}...`}<p className={classes.more} onClick={this.handleClickOpen}>More</p>
 										</Typography>
-									: <Typography className={classes.bio}>{bio}</Typography>}
+									: <Typography className={classes.bio}>{bio}</Typography>
+								}
+								<Popover
+									selectedValue={this.state.selectedValue}
+									open={this.state.open}
+									onClose={this.handleClose}
+									child={ doulaFullProfile }
+									doula={doula}
+								/>				
 								<Typography className={classes.lastSignIn}>Skills:</Typography>
 								<div className={classes.bulletSection}>
 									{doula.experience.map(experience => (
