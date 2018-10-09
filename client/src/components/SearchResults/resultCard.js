@@ -59,7 +59,8 @@ const styles = theme => ({
 		textDecoration: 'none',
 		color: "#ffa692 !important",
 		display: "inline-block",
-		marginTop: 0
+		marginTop: 0,
+		cursor: "pointer"
 	},
 	lastSignIn: {
 		fontWeight: 'bolder',
@@ -75,27 +76,38 @@ const styles = theme => ({
 		width: '180px',
 		textTransform: 'none',
 		backgroundColor: '#ffa692'
-	}
+	},
 });
 
 const MAX_LENGTH = 250;
 
 class ResultCard extends React.Component {
 	state = {
-		open: false,
-		selectedValue: this.props.doula.id
+		fullProfileOpen: false,
+		selectedValue: this.props.doula.id,
+		messageOpen: false
 	  };
 
-	handleClickOpen = () => {
+	handleProfileOpen = () => {
 		this.setState({
-			open: true,
+			fullProfileOpen: true,
 		});
 	};
 
-	handleClose = value => {
-		this.setState({ selectedValue: value, open: false });
+	handleProfileClose = value => {
+		this.setState({ selectedValue: value, fullProfileOpen: false });
 	};
-	
+
+	handleMessageOpen = () => {
+		this.setState({
+			messageOpen: true,
+		});
+	};
+
+	handleMessageClose = value => {
+		this.setState({ selectedValue: value, messageOpen: false });
+	};
+
 	render() {
 		const { classes, doula } = this.props;
 		const trimmedBio = doula.bio.substr(0, MAX_LENGTH)
@@ -111,7 +123,7 @@ class ResultCard extends React.Component {
 								<img className={classes.image} src={doula.image} alt={doula.name} />
 							</Grid>
 							<Grid item>
-								<Button variant="contained" className={classes.button}>
+								<Button variant="contained" className={classes.button} onClick={this.handleMessageOpen}>
 									Connect
 								</Button>
 							</Grid>
@@ -130,16 +142,17 @@ class ResultCard extends React.Component {
 								<hr className={classes.hr} />
 								{doula.bio.length > MAX_LENGTH
 									? <Typography className={classes.bio}>
-											{`${bio}...`}<p className={classes.more} onClick={this.handleClickOpen}>More</p>
+											{`${bio}...`}<p className={classes.more} onClick={this.handleProfileOpen}>More</p>
 										</Typography>
 									: <Typography className={classes.bio}>{bio}</Typography>
 								}
 								<Popover
 									selectedValue={this.state.selectedValue}
-									open={this.state.open}
-									onClose={this.handleClose}
+									open={this.state.fullProfileOpen}
+									onClose={this.handleProfileClose}
 									child={ doulaFullProfile }
 									doula={doula}
+									className={classes.popover}
 								/>				
 								<Typography className={classes.lastSignIn}>Skills:</Typography>
 								<div className={classes.bulletSection}>
