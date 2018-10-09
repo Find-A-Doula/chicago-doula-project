@@ -5,16 +5,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Avatar from '@material-ui/core/Avatar';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Dialog from '@material-ui/core/Dialog';
-import PersonIcon from '@material-ui/icons/Person';
-import AddIcon from '@material-ui/icons/Add';
-import blue from '@material-ui/core/colors/blue';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,9 +17,73 @@ const styles = theme => ({
 	},
 	wrapper: {
 		padding: 20,
+		marginTop: -30,
 	},
 	image: {
 		borderRadius: '10px'
+	},
+	subheadline: {
+		paddingBottom: 4
+	},
+	name: {
+		fontWeight: "bolder",
+		fontSize: "1.5em",
+		paddingBottom: 2
+	},
+	sectionTitle: {
+		fontWeight: "bolder",
+		paddingTop: 15,
+		paddingBottom: 15
+	},
+	button: {
+		width: '180px',
+		textTransform: 'none',
+		backgroundColor: '#ffa692',
+		marginTop: 6
+	},
+	header: {
+		marginLeft: 20
+	},
+	star: {
+		color: '#f8b64c',
+		paddingTop: 4,
+		paddingBottom: 4
+	},
+	certificate: {
+		height: 80,
+		width: 180,
+		display: "flex",
+		border: "1px solid black",
+		margin: 20,
+		alignItems: "center",
+		justifyContent: "center"
+	},
+	listWrapper: {
+		marginTop: 10
+	},
+	listItem: {
+		padding: 4,
+	},
+	experienceBox: {
+		minHeight: 80,
+		width: "45%",
+		display: "flex",
+		backgroundColor: "lightgray",
+		margin: 20,
+		alignItems: "center",
+		justifyContent: "center",
+		flexDirection: "column",
+	},
+	experienceHeadline: {
+		marginTop: 20,
+		fontWeight: "bolder",
+		fontSize: 20
+	},
+	eduListWrapper: {
+		marginLeft: 20
+	},
+	experienceLists: {
+		marginBottom: 20
 	}
 })
 
@@ -37,11 +94,11 @@ class DoulaFullProfile extends React.Component {
 
 		return (
 			<div className={classes.wrapper}>
-			  <Grid container>
-				<Grid item xs={4}>
+			  <Grid container justify="flex-start" direction="row">
+				<Grid item>
 					<img className={classes.image} src={doula.image} alt={doula.name} />
 				</Grid>
-				<Grid item xs={8}>
+				<Grid item className={classes.header}>
 					<Typography className={classes.name}>{doula.name}</Typography>
 					<Typography>
 						<FontAwesomeIcon className={classes.star} icon={faStar} />
@@ -50,11 +107,15 @@ class DoulaFullProfile extends React.Component {
 						<FontAwesomeIcon className={classes.star} icon={faStar} />
 						<FontAwesomeIcon className={classes.star} icon={faStar} />
 					</Typography>
-					<Typography className={classes.priceRange}>Price Range: ${doula.priceRangeMin} - ${doula.priceRangeMax}</Typography>
-					<Typography className={classes.location}>{doula.location}</Typography>
+					<Typography className={classes.subheadline}>Price Range: ${doula.priceRangeMin} - ${doula.priceRangeMax}</Typography>
+					<Typography className={classes.subheadline}>Location: {doula.location}</Typography>
+					<Typography className={classes.subheadline}>Travel Range: {doula.travelRange} miles</Typography>
+					<Button variant="contained" className={classes.button} onClick={this.handleClickOpen}>
+						Connect
+					</Button>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography>About:</Typography>
+					<Typography className={classes.sectionTitle}>About:</Typography>
 				</Grid>
 				<Grid item xs={12}>
 					<Typography>
@@ -71,19 +132,78 @@ class DoulaFullProfile extends React.Component {
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography>Certifications:</Typography>
+					<Typography className={classes.sectionTitle}>Certifications:</Typography>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography>Learn more about evaluating doula certifications, an important part of the interview process</Typography>
-					<Grid item xs={6}>
+					<Typography>Learn more about evaluating doula certifications, an important part of the interview process.</Typography>
+				</Grid>
+				<Grid container justify="flex-start" direction="row">
+					<Grid item>
 						{/* Certificate */}
+						<div className={classes.certificate}>Certification</div>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item>
 						{/* List */}
+						<List className={classes.listWrapper} dense={true}>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+						</List>
 					</Grid>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography>Experience:</Typography>
+					<Typography className={classes.sectionTitle}>Experience:</Typography>
+				</Grid>
+				<Grid container justify="flex-start" direction="row">
+					<div className={classes.experienceBox}>
+						<div>
+							<Typography className={classes.experienceHeadline}>Prenatal</Typography>
+						</div>
+
+						<Grid container justify="center" direction="row" className={classes.experienceLists}>
+							<div>
+								<List className={classes.listWrapper} dense={true}>
+									<ListItem className={classes.listItem}><ListItemText primary="Multiples"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Premature"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Nursing/Lactation"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="High Risk"/></ListItem>
+								</List>
+							</div>
+							<div>
+								<List className={classes.listWrapper} dense={true}>
+									<ListItem className={classes.listItem}><ListItemText primary="Families of Color"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Adoption"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="People with Disabilites"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Water Births"/></ListItem>
+								</List>
+							</div>
+						</Grid>
+
+					</div>
+					<div className={classes.experienceBox}>
+						<div>
+							<Typography className={classes.experienceHeadline}>Post-partum</Typography>
+						</div>
+
+						<Grid container justify="center" direction="row" className={classes.experienceLists}>
+							<div>
+								<List className={classes.listWrapper} dense={true}>
+									<ListItem className={classes.listItem}><ListItemText primary="Care after Cesarean"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Prematurity"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Nursing/Lactation"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Cooking/Nutrition"/></ListItem>
+								</List>
+							</div>
+							<div>
+								<List className={classes.listWrapper} dense={true}>
+									<ListItem className={classes.listItem}><ListItemText primary="Overnight Availability"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Comfort Watching"/></ListItem>
+									<ListItem className={classes.listItem}><ListItemText primary="Providing Care for Older Children"/></ListItem>
+								</List>
+							</div>
+						</Grid>
+					</div>
 				</Grid>
 				<Grid item xs={6}>
 					{/* Prenatal */}
@@ -92,10 +212,17 @@ class DoulaFullProfile extends React.Component {
 					{/* Post-Partum */}
 				</Grid>
 				<Grid item xs={12}>
-					<Typography>Education:</Typography>
+					<Typography className={classes.sectionTitle}>Education:</Typography>
 				</Grid>
 				<Grid item xs={12}>
-					{/* List */}
+					<Grid item>
+						<List className={classes.eduListWrapper} dense={true}>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+							<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
+						</List>
+					</Grid>
 				</Grid>
 			  </Grid>
 		  </div>
