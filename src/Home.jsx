@@ -1,9 +1,8 @@
 import React from 'react'
 
-const Landing = () => (
+const Home = () => (
 	<div className="landing">
 		<h1>The Chicago Doula Project</h1>
 	</div>
 )
-
-export default Landing
+export default Home

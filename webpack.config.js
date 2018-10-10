@@ -19,7 +19,6 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    // publicPath: '/public/',
     historyApiFallback: true,
     contentBase: './public',
     port: 3000
@@ -49,6 +48,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   }
