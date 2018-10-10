@@ -6,18 +6,25 @@ If you'd like to join the project, please join the #findadoula channel on [Chi H
 
 ## Getting Started
 
+[Node](http://nodejs.org/) is really easy to install and it now includes [NPM](https://npmjs.org/). Please refer to their docs for installation instructions.
+You should be able to run the following commands after Node has been installed.
+
+    $ node --version
+    v10.9.0
+
+    $ npm --version
+    6.2.0
+
 ### Installing
 
-After downloading the distribution, you will need to download the app dependencies:
+After downloading the distribution, navigate to the root directory, and download the app dependencies:
 
 ```
-$ yarn    // in root directory
-$ cd client
-$ yarn
+$ npm install
 ```
 
-Then, navigate to the root directory and run the development server:
+You can start the development server with the following command:
 
 ```
-$ yarn dev
+$ npm start
 ```
