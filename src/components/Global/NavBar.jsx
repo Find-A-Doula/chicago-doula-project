@@ -59,6 +59,12 @@ const styles = {
 class ButtonAppBar extends React.Component {
 	state = {
 		anchorEl: null,
+		page: '',
+	}
+
+	componentDidMount() {
+		const { currentPage } = this.props;
+		this.setState({ page: currentPage })
 	}
 
 	handleClick = event => {
@@ -69,30 +75,36 @@ class ButtonAppBar extends React.Component {
 		this.setState({ anchorEl: null })
 	}
 
+	handlePageChange = page => {
+		this.setState({ page })
+	}
+
 	render() {
-		const { anchorEl } = this.state
-		const { classes, currentPage } = this.props
+		const { anchorEl, page } = this.state
+		const { classes } = this.props
+
+		console.log(page)
 
 		return (
 			<div className={classes.root}>
 				<AppBar position="static" className={classes.navBar}>
 					<Toolbar>
-						<Typography variant="title" className={classes.flex}>
+						<Typography className={classes.flex}>
 							<Link to="/home">
 								<img href="/" src="./assets/img/logoNoTagline.png" alt="logo" height="50" width="100" />
 							</Link>
 						</Typography>
 						<div className={classes.bigScreenNav}>
 							<Button href="/learn"
-								className={currentPage === '/learn' ? classes.desktopMenuButtonActive : classes.desktopMenuButtonInactive}>
+								className={page === '/learn' ? classes.desktopMenuButtonActive : classes.desktopMenuButtonInactive}>
 								What is a Doula
 							</Button>
 							<Button href="/search"
-								className={currentPage === '/search' ? classes.desktopMenuButtonActive : classes.desktopMenuButtonInactive}>
+								className={page === '/search' ? classes.desktopMenuButtonActive : classes.desktopMenuButtonInactive}>
 								Search
 							</Button>
 							<Button href="/comingsoon"
-								className={currentPage === '/comingsoon' ? classes.desktopMenuButtonActive : classes.desktopMenuButtonInactive}>
+								className={page === '/register' ? classes.desktopMenuButtonActive : classes.desktopMenuButtonInactive}>
 								Register
 							</Button>
 						</div>

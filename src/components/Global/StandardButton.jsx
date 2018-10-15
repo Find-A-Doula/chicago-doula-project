@@ -25,7 +25,7 @@ StandardButton.propTypes = {
 }
 
 StandardButton.defaultProps = {
-	onClick: event => event.preventDefault(),
+	onClick: () => null,
 	value: '',
 }
 

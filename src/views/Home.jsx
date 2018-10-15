@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid'
 
 // Local
 import CTAForm from '../components/Home/CTAForm'
-import StandardButtom from '../components/Global/StandardButton'
+import StandardButton from '../components/Global/StandardButton'
 
 class Home extends Component {
 	state = {
@@ -56,12 +56,12 @@ class Home extends Component {
 					</Grid>
 					<Grid item>
 						<Link to="/learn">
-							<StandardButtom value="Learn More" />
+							<StandardButton value="Learn More" />
 						</Link>
 					</Grid>
 					<Grid item>
 						<Link to="/comingsoon">
-							<StandardButtom value="Find a Doula" />
+							<StandardButton value="Find a Doula" />
 						</Link>
 					</Grid>
 				</Grid>
