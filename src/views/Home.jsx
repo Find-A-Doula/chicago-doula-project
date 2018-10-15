@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 
@@ -72,30 +72,31 @@ class Home extends Component {
 
 const styles = () => ({
 	formWrapper: {
-		marginTop: "40px",
+		marginTop: '40px',
 	},
 	root: {
 		flexGrow: 1,
 	},
 })
 
-const Splash = styled.div`
-	background-color: var(--main-bg-color);
-	background-size: cover;
-	color: #2c3d50;
-	position: fixed;
-	height: 100%;
-	top: 0;
-	width: 100%;
-`
 const Logo = styled.img`
 	margin-top: 10%;
-	width: 90%;
 	padding: 0 20px;
+	width: 90%;
 `
 const LogoWrapper = styled.div`
 	display: block;
 `
+const Splash = styled.div`
+	background-color: var(--main-bg-color);
+	background-size: cover;
+	color: #2c3d50;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+`
+
 Home.propTypes = {
 	classes: PropTypes.object.isRequired,
 }

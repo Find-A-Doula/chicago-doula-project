@@ -20,11 +20,12 @@ const Button = styled.input`
 	text-transform: uppercase;
 `
 StandardButton.propTypes = {
-	onClick: PropTypes.func.isRequired,
+	onClick: PropTypes.func,
 	value: PropTypes.string,
 }
 
 StandardButton.defaultProps = {
+	onClick: event => event.preventDefault(),
 	value: '',
 }
 
