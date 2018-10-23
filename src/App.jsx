@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import theme from './theme'
 import Home from './views/Home'
 // import UserSurvey from './views/UserSurvey'
-// import SearchResults from './views/SearchResults'
+import SearchResults from './views/SearchResults'
 import Learn from './views/Learn'
 import ComingSoon from './views/Delivering'
 // import NavBar from './components/Global/NavBar'
@@ -23,7 +23,7 @@ const App = () => (
 					<Switch>
 						<Route exact path="/" component={Home} />
 						{/* <Route path="/search" component={UserSurvey} /> */}
-						{/* <Route path="/results" component={SearchResults} /> */}
+						<Route path="/results" component={SearchResults} />
 						<Route path="/learn" component={Learn} />
 						<Route path="/comingsoon" component={ComingSoon} />
 						<Route component={ComingSoon} />

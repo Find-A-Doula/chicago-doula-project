@@ -54,8 +54,6 @@ const styles = {
 	},
 }
 
-// max - width less than or equal to
-
 class ButtonAppBar extends React.Component {
 	state = {
 		anchorEl: null,
@@ -63,7 +61,7 @@ class ButtonAppBar extends React.Component {
 	}
 
 	componentDidMount() {
-		const { currentPage } = this.props;
+		const { currentPage } = this.props
 		this.setState({ page: currentPage })
 	}
 
@@ -82,8 +80,6 @@ class ButtonAppBar extends React.Component {
 	render() {
 		const { anchorEl, page } = this.state
 		const { classes } = this.props
-
-		console.log(page)
 
 		return (
 			<div className={classes.root}>

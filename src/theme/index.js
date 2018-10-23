@@ -13,6 +13,9 @@ const theme = {
 			main: '#ffa692',
 		},
 	},
+	typography: {
+		useNextVariants: true,
+	},
 }
 
 export default theme
