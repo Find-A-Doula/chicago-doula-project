@@ -169,7 +169,7 @@ class DoulaFullProfile extends React.Component {
 									<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
 									<ListItem className={classes.listItem}><ListItemText primary="Lorem ipsum dolor sit amet consectetur adipiscing"/></ListItem>
 								</List>
-							}						
+							}
 						</Grid>
 					</Grid>
 					<Popover

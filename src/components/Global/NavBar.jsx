@@ -86,7 +86,7 @@ class ButtonAppBar extends React.Component {
 				<AppBar position="static" className={classes.navBar}>
 					<Toolbar>
 						<Typography className={classes.flex}>
-							<Link to="/home">
+							<Link to="/">
 								<img href="/" src="./assets/img/logoNoTagline.png" alt="logo" height="50" width="100" />
 							</Link>
 						</Typography>
