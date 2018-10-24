@@ -12,8 +12,8 @@ module.exports = {
   ],
   devtool: 'cheap-eval-source-map',
   output: {
-    // path: path.join(__dirname, 'public'),
-    path: path.resolve("public/assets"),
+    // path: path.resolve("public/assets"),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
     publicPath: 'assets'
   },
@@ -21,7 +21,18 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     contentBase: './public',
-    port: 3000
+    port: 3000,
+    // proxy: {
+    //   "/api/**": "http://localhost:8080"
+    // }
+    proxy: { 
+      '/api/**': { 
+        target: 'http://localhost:8080/', 
+        pathRewrite: { '^/api': '' }, 
+        secure: false, 
+        logLevel: 'debug' 
+      }
+    }
   },
   mode: 'development',
   resolve: {

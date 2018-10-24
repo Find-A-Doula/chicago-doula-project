@@ -1,5 +1,6 @@
 // Vendor
 import React, { Component } from 'react'
+import axios from 'axios'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
@@ -17,12 +18,19 @@ class Home extends Component {
 	}
 
 	handleFormSubmit = event => {
+		const { userEmail } = this.state
 		event.preventDefault()
 
 		// Post email to ctaemails collection
-		// axios.post('/cta', { email: this.state.userEmail }).then(this.setState({ showCTA: false })).catch(error => {
-		//   console.log(error.response)
-		// })
+		axios.post('/api/cta', { email: userEmail })
+			.then(() => 
+				this.setState({ showCTA: false })
+			)
+			.catch(error => {
+				/* eslint-disable no-console */
+				console.log(error.response)
+				/* eslint-disable no-console */
+			})
 	}
 
 	handleInputChange = event => {
@@ -42,7 +50,7 @@ class Home extends Component {
 					<LogoWrapper>
 						<Logo src="assets/img/backgrounds/logoBlue.png" alt="logo" />
 					</LogoWrapper>
-					<Grid item xs={12} className={classes.formWrapper}>
+					<Grid container item xs={12} className={classes.formWrapper} justify="center">
 						{showCTA ?
 							<CTAForm
 								userEmail={userEmail}
