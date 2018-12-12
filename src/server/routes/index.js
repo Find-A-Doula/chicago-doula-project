@@ -2,6 +2,7 @@ const path = require('path');
 const router = require('express').Router();
 
 const ctaRoutes = require('./cta');
+const doulaRoutes = require('./doula');
 
 // Routes
 router.use('/cta', ctaRoutes)

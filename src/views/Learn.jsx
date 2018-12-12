@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
+// import { Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 // Local
@@ -47,7 +48,7 @@ const Learn = ({ classes }) => (
 			<Grid container spacing={16} justify="center" alignItems="center">
 				<Wrapper>
 					<Grid item>
-						<Headline>What is a Doula?</Headline>
+						<Headline variant="h2">What is a Doula?</Headline>
 					</Grid>
 					<Grid item>
 						<Subheader>A professional trained in childbirth who provides constant physical and emotional support to families before, during and after pregnancy to help them achieve most satisfying birth experience possible.</Subheader>
@@ -100,7 +101,6 @@ const Subheader = styled.p`
 	}
 `
 const Wrapper = styled.div`
-	font-family: var(--main-font-family);
 	margin: 0px 20% 20px 20%;
 	overflow: 'auto';
 `

@@ -23,7 +23,6 @@ app.use(bodyParser.json())
 
 // Serve up static assets
 app.use(express.static(path.join(__dirname, '../../public')))
-console.log(path.join(__dirname, '../../public'))
 
 app.get("/", function(req, res) {
 	res.sendFile(path.resolve(__dirname, "../../public/index.html"))
