@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 // Vendor
 import React, { Component } from 'react'
 import axios from 'axios'
@@ -23,13 +25,11 @@ class Home extends Component {
 
 		// Post email to ctaemails collection
 		axios.post('/api/cta', { email: userEmail })
-			.then(() => 
+			.then(() =>
 				this.setState({ showCTA: false })
 			)
 			.catch(error => {
-				/* eslint-disable no-console */
 				console.log(error.response)
-				/* eslint-disable no-console */
 			})
 	}
 

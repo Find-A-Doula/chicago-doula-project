@@ -1,3 +1,4 @@
 module.exports = {
-	CTAEmail: require('./ctaEmailSchema')
+	CTAEmail: require('./ctaEmailSchema'),
+	Doula: require('./doulaSchema')
 };

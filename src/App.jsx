@@ -11,6 +11,7 @@ import SearchResults from './views/SearchResults'
 import Learn from './views/Learn'
 import ComingSoon from './views/Delivering'
 // import NavBar from './components/Global/NavBar'
+import DoulaSurvey from './views/DoulaSurvey'
 
 const muiTheme = createMuiTheme(theme)
 
@@ -25,8 +26,9 @@ const App = () => (
 						{/* <Route path="/search" component={UserSurvey} /> */}
 						<Route path="/results" component={SearchResults} />
 						<Route path="/learn" component={Learn} />
+						<Route path="/signup" component={DoulaSurvey} />
 						<Route path="/comingsoon" component={ComingSoon} />
-						<Route component={ComingSoon} />
+						{/* <Route component={ComingSoon} /> */}
 					</Switch>
 				</div>
 			</BrowserRouter>

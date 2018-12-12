@@ -14,6 +14,7 @@ const theme = {
 		},
 	},
 	typography: {
+		fontFamily: '"Montserrat", sans-serif',
 		useNextVariants: true,
 	},
 }
